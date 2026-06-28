@@ -61,10 +61,44 @@ window.PMRR = (function () {
     { id: "123", bairro: "Cel. Ap. Borges / Vila João Pessoa", local: "", curso: "Arroio Moinho", regiao: "Leste", domicilios: 451, custo: 18760773.34, lat: -30.0690, lng: -51.1680 }
   ];
 
-  // ---- Bairros que concentram mais setores de risco (dissertação) ----
+  // ---- Bairros que concentram mais setores de risco ----
   const bairrosCriticos = [
     "Jardim Carvalho", "Vila São José", "Coronel Aparício Borges",
     "Vila João Pessoa", "Arquipélago"
+  ];
+
+  // ---- Recorte territorial prioritário ----
+  const areaPrioritaria = {
+    regiao: "Região Administrativa Leste de Porto Alegre",
+    bacias: ["Arroio Mem de Sá", "Arroio Riacho Doce", "Arroio Moinho (e afluentes)"],
+    bairros: [
+      "Bom Jesus", "Jardim Carvalho", "Partenon",
+      "Coronel Aparício Borges", "Vila São José", "Vila João Pessoa"
+    ]
+  };
+
+  // ---- Critérios usados para escolher os setores prioritários ----
+  const criterios = [
+    {
+      icone: "⚠️",
+      titulo: "Risco alto (R3) e muito alto (R4)",
+      desc: "Foram priorizados os setores classificados nos dois graus mais altos da escala de risco, onde é maior a probabilidade de danos às moradias e à vida das pessoas."
+    },
+    {
+      icone: "🏘️",
+      titulo: "População exposta",
+      desc: "Priorizaram-se setores com moradias diretamente inseridas nas áreas de risco mapeadas, buscando proteger o maior número de famílias."
+    },
+    {
+      icone: "🔍",
+      titulo: "Diagnóstico técnico e escuta comunitária",
+      desc: "A seleção combinou as inspeções de campo da equipe técnica com as indicações de moradores, lideranças e agentes públicos coletadas em oficinas e caminhadas."
+    },
+    {
+      icone: "🌊",
+      titulo: "Bacias hidrográficas críticas",
+      desc: "Concentração nas bacias dos arroios Mem de Sá, Riacho Doce e Moinho, onde enxurradas, erosão de margens e drenagem insuficiente agravam o risco."
+    }
   ];
 
   // ---- As 4 etapas do PMRR ----
@@ -128,6 +162,7 @@ window.PMRR = (function () {
 
   return {
     destaques, tipologia, faixasIVS, setores, bairrosCriticos,
+    areaPrioritaria, criterios,
     etapas, produtos, materiais, contatos, creditos
   };
 })();

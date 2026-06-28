@@ -25,6 +25,7 @@
       <nav class="nav__links" id="navLinks">
         <a href="#sobre">O Plano</a>
         <a href="#risco">O risco</a>
+        <a href="#areas">Áreas prioritárias</a>
         <a href="#mapa">Mapa</a>
         <a href="#acoes">Ações</a>
         <a href="#produtos">Produtos</a>
@@ -38,11 +39,11 @@
   <section class="hero" id="inicio">
     <div class="hero__bg"></div>
     <div class="hero__content">
-      <p class="hero__eyebrow">Plano Municipal de Redução de Riscos</p>
-      <h1 class="hero__title">Porto Alegre frente aos<br /><span>riscos geo-hidrológicos</span></h1>
+      <p class="hero__eyebrow">Porto Alegre · PMRR</p>
+      <h1 class="hero__title">Plano Municipal de<br /><span>Redução de Riscos</span></h1>
       <p class="hero__lead">
-        Mapeamento dos setores de risco, perfil dos territórios e ações propostas para
-        reduzir os impactos de enchentes, enxurradas e deslizamentos na cidade.
+        Mapeamento dos setores de risco, definição das áreas prioritárias e ações
+        propostas para reduzir os impactos de enchentes, enxurradas e deslizamentos.
       </p>
       <div class="hero__cta">
         <a href="#risco" class="btn btn--primary">Ver os dados</a>
@@ -136,8 +137,31 @@
     </div>
   </section>
 
+  <!-- ÁREAS PRIORITÁRIAS -->
+  <section class="section" id="areas">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Onde atuamos</span>
+        <h2>Áreas prioritárias e como foram escolhidas</h2>
+        <p class="section__intro">
+          Diante do grande número de setores de risco no município, o plano detalhou
+          ações para um conjunto de <strong>setores prioritários</strong>, concentrados
+          na <span id="areaRegiao"></span>, ao longo das bacias dos arroios
+          <strong>Mem de Sá</strong>, <strong>Riacho Doce</strong> e <strong>Moinho</strong>.
+        </p>
+      </div>
+
+      <h3 class="block-title">Critérios de seleção</h3>
+      <div class="criterios" id="criterios-grid"></div>
+
+      <h3 class="block-title">Bairros atendidos</h3>
+      <div class="bairros" id="bairros-grid"></div>
+      <p class="card__note">Número de setores prioritários e domicílios estimados por bairro.</p>
+    </div>
+  </section>
+
   <!-- MAPA -->
-  <section class="section" id="mapa">
+  <section class="section section--alt" id="mapa">
     <div class="container">
       <div class="section__head">
         <span class="section__tag">Mapa interativo</span>
@@ -159,7 +183,7 @@
   </section>
 
   <!-- AÇÕES / INVESTIMENTO -->
-  <section class="section section--alt" id="acoes">
+  <section class="section" id="acoes">
     <div class="container">
       <div class="section__head">
         <span class="section__tag">Ações propostas</span>

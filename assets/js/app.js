@@ -30,6 +30,47 @@
       <p>${p.desc}</p>
     </article>`).join("");
 
+  // Região prioritária (texto)
+  const elRegiao = document.getElementById("areaRegiao");
+  if (elRegiao) elRegiao.textContent = D.areaPrioritaria.regiao;
+
+  // Critérios de seleção
+  const critGrid = document.getElementById("criterios-grid");
+  if (critGrid) critGrid.innerHTML = D.criterios.map((c, i) => `
+    <article class="criterio reveal">
+      <div class="criterio__top"><span class="criterio__icone">${c.icone}</span><span class="criterio__n">${i + 1}</span></div>
+      <h4>${c.titulo}</h4>
+      <p>${c.desc}</p>
+    </article>`).join("");
+
+  // Bairros atendidos (agregado a partir dos setores)
+  const bairrosGrid = document.getElementById("bairros-grid");
+  if (bairrosGrid) {
+    const agg = {};
+    D.setores.forEach(s => {
+      // um setor pode citar mais de um bairro (separados por "/")
+      s.bairro.split("/").map(b => b.trim()).forEach(b => {
+        const nome = b.replace("Cel. Ap. Borges", "Coronel Aparício Borges");
+        if (!agg[nome]) agg[nome] = { setores: 0, domicilios: 0 };
+        agg[nome].setores += 1;
+        agg[nome].domicilios += (s.domicilios || 0);
+      });
+    });
+    const ordem = D.areaPrioritaria.bairros;
+    const lista = Object.entries(agg).sort((a, b) => {
+      const ia = ordem.indexOf(a[0]), ib = ordem.indexOf(b[0]);
+      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+    });
+    bairrosGrid.innerHTML = lista.map(([nome, v]) => `
+      <div class="bairro reveal">
+        <span class="bairro__nome">${nome}</span>
+        <div class="bairro__nums">
+          <span><b>${v.setores}</b> ${v.setores === 1 ? "setor" : "setores"}</span>
+          <span><b>${new Intl.NumberFormat("pt-BR").format(v.domicilios)}</b> domicílios</span>
+        </div>
+      </div>`).join("");
+  }
+
   // Contatos
   document.getElementById("contatos-grid").innerHTML = D.contatos.map(c => `
     <div class="contato reveal">
