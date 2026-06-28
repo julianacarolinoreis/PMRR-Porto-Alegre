@@ -162,7 +162,8 @@
     const rows = [...D.medidas].sort((a, b) => b[metric] - a[metric]);
     const isCusto = metric === "custo";
     const data = {
-      labels: rows.map(m => m.id + " · " + m.setor),
+      // rótulo em duas linhas: intervenção (nome real) + local
+      labels: rows.map(m => [m.intervencao, m.local]),
       datasets: [{
         label: isCusto ? "Investimento" : "Domicílios",
         data: rows.map(m => m[metric]),
@@ -175,18 +176,19 @@
       plugins: {
         legend: { display: false },
         tooltip: { callbacks: {
-          title: (items) => "Medida " + rows[items[0].dataIndex].id,
-          label: (c) => isCusto ? " " + BRL.format(rows[c.dataIndex].custo) : " " + rows[c.dataIndex].domicilios + " domicílios",
+          title: (items) => rows[items[0].dataIndex].intervencao,
+          label: (c) => isCusto ? " " + BRL.format(rows[c.dataIndex].custo) : " " + rows[c.dataIndex].domicilios + " domicílios beneficiados",
           afterLabel: (c) => {
             const m = rows[c.dataIndex];
-            return `${m.bairro} · Setor ${m.setor} · ${m.grau}`;
+            const tipo = m.tipo === "G" ? "medida geotécnica" : "medida hidrológica";
+            return `${m.local}\n${m.grau === "R4" ? "Risco Muito Alto (R4)" : "Risco Alto (R3)"} · ${tipo}`;
           }
         } }
       },
       scales: {
         x: { beginAtZero: true, grid: { color: "#eef0ec" },
           ticks: { callback: (v) => isCusto ? "R$ " + (v / 1e6).toFixed(0) + "M" : v } },
-        y: { grid: { display: false }, ticks: { font: { size: 10 } } }
+        y: { grid: { display: false }, ticks: { font: { size: 9 }, autoSkip: false } }
       }
     };
     if (medidasChart) { medidasChart.data = data; medidasChart.options = opts; medidasChart.update(); }
