@@ -148,19 +148,35 @@
   [filtroRegiao, filtroTipo, filtroGrau].forEach(s => s.addEventListener("change", renderTabela));
   renderTabela();
 
-  // Galeria de campo + lightbox
+  // Galeria de campo + filtro por área + lightbox
   const galGrid = document.getElementById("galeria-grid");
   if (galGrid) {
-    galGrid.innerHTML = D.galeria.map((g, i) => `
-      <figure class="foto reveal" data-i="${i}">
-        <img src="${g.img}" alt="${g.legenda}" loading="lazy" />
-        <figcaption>${g.legenda}<span>${g.area}</span></figcaption>
-      </figure>`).join("");
+    const areas = ["Todas", ...new Set(D.galeria.map(g => g.area))];
+    const filtrosEl = document.getElementById("galeria-filtros");
+    filtrosEl.innerHTML = areas.map((a, i) =>
+      `<button class="gal-btn${i === 0 ? " is-active" : ""}" data-area="${a}">${a}</button>`).join("");
+    let visiveis = D.galeria;
+    function renderGaleria(area) {
+      visiveis = area === "Todas" ? D.galeria : D.galeria.filter(g => g.area === area);
+      galGrid.innerHTML = visiveis.map((g, i) => `
+        <figure class="foto" data-i="${i}">
+          <img src="${g.img}" alt="${g.legenda}" loading="lazy" />
+          <figcaption>${g.legenda}<span>${g.area}</span></figcaption>
+        </figure>`).join("");
+    }
+    renderGaleria("Todas");
+    filtrosEl.addEventListener("click", (e) => {
+      const btn = e.target.closest(".gal-btn"); if (!btn) return;
+      filtrosEl.querySelectorAll(".gal-btn").forEach(b => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      renderGaleria(btn.dataset.area);
+    });
+
     const lb = document.getElementById("lightbox");
     const lbImg = document.getElementById("lightboxImg");
     const lbCap = document.getElementById("lightboxCap");
     const openLb = (i) => {
-      const g = D.galeria[i];
+      const g = visiveis[i];
       lbImg.src = g.img; lbImg.alt = g.legenda;
       lbCap.textContent = `${g.legenda} — ${g.area}`;
       lb.classList.add("is-open"); lb.setAttribute("aria-hidden", "false");

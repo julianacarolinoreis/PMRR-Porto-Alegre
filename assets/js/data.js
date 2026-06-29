@@ -214,7 +214,11 @@ window.PMRR = (function () {
     { img: "assets/img/campo/bomjesus-3.jpg", legenda: "Caminhada comunitária pelo setor de risco", area: "Bom Jesus" },
     { img: "assets/img/campo/bomjesus-4.jpg", legenda: "Arroio Mem de Sá no trecho do setor de risco", area: "Bom Jesus" },
     { img: "assets/img/campo/bomjesus-2.jpg", legenda: "Acúmulo de resíduos obstruindo o arroio", area: "Bom Jesus" },
-    { img: "assets/img/campo/bomjesus-5.jpg", legenda: "Travessia precária sobre o arroio", area: "Bom Jesus" }
+    { img: "assets/img/campo/bomjesus-5.jpg", legenda: "Travessia precária sobre o arroio", area: "Bom Jesus" },
+    { img: "assets/img/campo/partenon-2.jpg", legenda: "Equipe técnica e Defesa Civil em inspeção de campo", area: "Partenon" },
+    { img: "assets/img/campo/partenon-3.jpg", legenda: "Edificações sobre encosta íngreme", area: "Partenon" },
+    { img: "assets/img/campo/partenon-1.jpg", legenda: "Moradia em encosta no setor de risco", area: "Partenon" },
+    { img: "assets/img/campo/partenon-4.jpg", legenda: "Moradia em terreno de risco geotécnico", area: "Partenon" }
   ];
 
   // ===== Porto Alegre em números (IBGE, 2022) =====
