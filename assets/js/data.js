@@ -196,8 +196,7 @@ window.PMRR = (function () {
   const materiais = [
     { titulo: "Cartilha do PMRR (PDF)", url: "https://drive.google.com/file/d/1hhIp-rgB69nEqpDgWXFWDolauF07OCnL/view" },
     { titulo: "Relatório PMRR — Etapa 2, Volume 1 (PDF)", url: "https://drive.google.com/file/d/1IFJY8X4Q54Zs9vYAqF-nNI2KWTnxVutG/view" },
-    { titulo: "Relatório PMRR — Etapa 2, Volume 2 (PDF)", url: "https://drive.google.com/file/d/1Ub5YUW9pBDZEpcVy5Fh9t5O3vhjcniko/view" },
-    { titulo: "Pasta do projeto PMRR no Google Drive", url: "https://drive.google.com/drive/folders/1-b2_Btctn2KLY8N_KeEZaMou86f1FOfJ" }
+    { titulo: "Relatório PMRR — Etapa 2, Volume 2 (PDF)", url: "https://drive.google.com/file/d/1Ub5YUW9pBDZEpcVy5Fh9t5O3vhjcniko/view" }
   ];
 
   // ===== Telefones úteis (Cartilha PMRR-POA) =====
