@@ -97,15 +97,12 @@
       <path d="M0 46 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#1b7a5a" opacity=".7"/></g></svg>`,
     enxurrada: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Enxurrada">
       <polygon points="0,52 64,16 64,64 0,64" fill="#b5651d"/><polygon points="0,60 64,28 64,64 0,64" fill="#8a6d3b"/>
-      <g transform="rotate(-28 11 49)"><rect x="6" y="44" width="9" height="7" fill="#e8e2d5"/><polygon points="5,44 10.5,39 16,44" fill="#9c4f2a"/></g>
-      <g transform="rotate(-28 22 41)"><rect x="18" y="37" width="8" height="6" fill="#e8e2d5"/><polygon points="17,37 22,32.5 27,37" fill="#9c4f2a"/></g>
-      <g class="a-torrent2" stroke-linecap="round" fill="none">
-        <line x1="60" y1="13" x2="52" y2="24" stroke="#2f8f9d" stroke-width="2.6"/>
-        <line x1="56" y1="18" x2="48" y2="29" stroke="#1b7a5a" stroke-width="2"/>
-        <line x1="51" y1="22" x2="43" y2="33" stroke="#3aa6b5" stroke-width="2.4"/>
-        <line x1="46" y1="27" x2="38" y2="38" stroke="#2f8f9d" stroke-width="2.6"/>
-        <line x1="41" y1="32" x2="33" y2="43" stroke="#1b7a5a" stroke-width="2"/>
-        <line x1="36" y1="37" x2="28" y2="48" stroke="#3aa6b5" stroke-width="2.4"/></g></svg>`,
+      <g transform="rotate(-26 12 47)"><rect x="7" y="42" width="9" height="7" fill="#efe9dc"/><polygon points="6,42 11.5,37 17,42" fill="#9c4f2a"/></g>
+      <g transform="rotate(-26 25 39)"><rect x="21" y="35" width="8" height="6" fill="#efe9dc"/><polygon points="20,35 25,30.5 30,35" fill="#9c4f2a"/></g>
+      <g class="a-flood">
+        <path d="M64 2 L64 20 C 48 26 34 33 22 41 C 16 45 11 48 7 47 C 4 46 3 44 4 42 C 14 36 30 27 46 18 C 53 14 59 9 64 5 Z" fill="#2f8f9d"/>
+        <path class="ff2" d="M64 8 L64 19 C 49 25 36 32 25 40 C 19 44 13 47 9 46 C 12 43 18 40 26 34 C 38 26 51 18 64 11 Z" fill="#3aa6b5" opacity=".8"/>
+      </g></svg>`,
     alagamento: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Alagamento">
       <rect x="2" y="12" width="17" height="34" fill="#d8d0c0"/><rect x="6" y="17" width="4" height="4" fill="#9bbcd0"/><rect x="12" y="17" width="4" height="4" fill="#9bbcd0"/>
       <rect x="45" y="8" width="17" height="38" fill="#cfc7b6"/><rect x="49" y="13" width="4" height="4" fill="#9bbcd0"/><rect x="55" y="13" width="4" height="4" fill="#9bbcd0"/>
