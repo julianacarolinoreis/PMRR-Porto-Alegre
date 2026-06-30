@@ -80,11 +80,11 @@ window.PMRR = (function () {
 
   // ===== Processos perigosos (Cartilha PMRR-POA) =====
   const processosPerigosos = [
-    { icone: "🌊", nome: "Inundações", desc: "Transbordamento dos rios, geralmente com baixas velocidades, em que a água invade as planícies ocupadas. As inundações do Guaíba dependem das chuvas em uma grande área do Estado e, em geral, podem ser previstas com dias de antecedência." },
-    { icone: "💧", nome: "Enxurradas", desc: "Processos de alta velocidade em arroios e córregos dos bairros íngremes, com elevado poder destrutivo e alto risco à vida. Lixo e intervenções mal feitas agravam o perigo. São causadas por chuvas intensas e localizadas, de difícil previsão." },
-    { icone: "🏚️", nome: "Alagamentos", desc: "Ocorrem quando a água da chuva se acumula em ruas e áreas urbanas por falhas no sistema de drenagem (bueiros, pontilhões, canalizações etc.)." },
-    { icone: "⛰️", nome: "Escorregamentos e queda de blocos", desc: "Escorregamentos de cortes e aterros, quedas de muros e de blocos em áreas íngremes, associados a chuvas intensas, cortes muito inclinados e má drenagem. Podem trazer risco à vida." },
-    { icone: "🪨", nome: "Erosão", desc: "Desgaste e arraste do solo pela água, especialmente em áreas sem proteção. Causa descalçamento de muros junto a arroios e de fundações de casas, além da instabilização de blocos de rocha." }
+    { anim: "inundacao", nome: "Inundações", desc: "Transbordamento dos rios, geralmente com baixas velocidades, em que a água invade as planícies ocupadas. As inundações do Guaíba dependem das chuvas em uma grande área do Estado e, em geral, podem ser previstas com dias de antecedência." },
+    { anim: "enxurrada", nome: "Enxurradas", desc: "Processos de alta velocidade em arroios e córregos dos bairros íngremes, com elevado poder destrutivo e alto risco à vida. Lixo e intervenções mal feitas agravam o perigo. São causadas por chuvas intensas e localizadas, de difícil previsão." },
+    { anim: "alagamento", nome: "Alagamentos", desc: "Ocorrem quando a água da chuva se acumula em ruas e áreas urbanas por falhas no sistema de drenagem (bueiros, pontilhões, canalizações etc.)." },
+    { anim: "deslizamento", nome: "Escorregamentos e queda de blocos", desc: "Escorregamentos de cortes e aterros, quedas de muros e de blocos em áreas íngremes, associados a chuvas intensas, cortes muito inclinados e má drenagem. Podem trazer risco à vida." },
+    { anim: "erosao", nome: "Erosão", desc: "Desgaste e arraste do solo pela água, especialmente em áreas sem proteção. Causa descalçamento de muros junto a arroios e de fundações de casas, além da instabilização de blocos de rocha." }
   ];
 
   // ===== Soluções: medidas estruturais (tipos) =====
@@ -110,7 +110,7 @@ window.PMRR = (function () {
   // ===== Guia: como agir (antes, durante e depois) =====
   const guia = [
     {
-      situacao: "Enchentes e inundações", icone: "🌊",
+      situacao: "Inundações", icone: "🌊",
       antes: [
         "Acompanhe os alertas da Defesa Civil e saiba até onde a água costuma subir.",
         "Combine com a família um ponto de encontro e uma rota de fuga para local alto.",

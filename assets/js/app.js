@@ -36,8 +36,8 @@
       <h4>${r.nome}</h4>
       <p class="regiao__local">${r.local}</p>
       <div class="regiao__nums">
-        <div><b>${NUM.format(r.pessoas)}</b><span>pessoas</span></div>
-        <div><b>${NUM.format(r.edificacoes)}</b><span>edificações</span></div>
+        <div><b data-count="${r.pessoas}">0</b><span>pessoas</span></div>
+        <div><b data-count="${r.edificacoes}">0</b><span>edificações</span></div>
       </div>
       <p class="regiao__tipo">${r.processo}</p>
       <span class="regiao__link">Ver detalhes no mapa →</span>
@@ -88,10 +88,36 @@
     return "";
   }
 
+  // Ilustrações animadas (SVG) dos processos perigosos
+  const ANIM = {
+    inundacao: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Inundação">
+      <rect x="23" y="22" width="18" height="24" fill="#e8e2d5"/><polygon points="21,22 32,12 43,22" fill="#b5651d"/>
+      <rect x="29" y="30" width="6" height="16" fill="#9bbcd0"/>
+      <g class="a-rise"><path d="M0 40 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#2f8f9d" opacity=".55"/>
+      <path d="M0 46 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#1b7a5a" opacity=".7"/></g></svg>`,
+    enxurrada: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Enxurrada">
+      <polygon points="0,64 0,46 64,10 64,64" fill="#d9c7a3"/><polygon points="0,64 0,52 64,20 64,64" fill="#c9b48a"/>
+      <g class="a-flow"><line x1="8" y1="50" x2="20" y2="44" stroke="#2f8f9d" stroke-width="3" stroke-linecap="round"/>
+      <line x1="22" y1="56" x2="36" y2="48" stroke="#1b7a5a" stroke-width="3" stroke-linecap="round"/>
+      <line x1="34" y1="46" x2="48" y2="38" stroke="#2f8f9d" stroke-width="3" stroke-linecap="round"/></g></svg>`,
+    alagamento: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Alagamento">
+      <rect x="10" y="20" width="14" height="26" fill="#e8e2d5"/><rect x="40" y="16" width="14" height="30" fill="#d8d0c0"/>
+      <g class="a-rain"><line x1="20" y1="6" x2="20" y2="12" stroke="#2f8f9d" stroke-width="2"/>
+      <line x1="32" y1="3" x2="32" y2="9" stroke="#2f8f9d" stroke-width="2"/><line x1="44" y1="7" x2="44" y2="13" stroke="#2f8f9d" stroke-width="2"/></g>
+      <rect x="0" y="46" width="64" height="18" fill="#2f8f9d" opacity=".65"/></svg>`,
+    deslizamento: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Movimento de massa">
+      <polygon points="0,64 0,30 40,8 64,8 64,64" fill="#b5651d"/><polygon points="0,64 6,40 40,18 64,28 64,64" fill="#8a6d3b"/>
+      <g class="a-slide"><circle cx="26" cy="30" r="4" fill="#5c4326"/><circle cx="34" cy="38" r="3" fill="#43321c"/><rect x="18" y="36" width="6" height="6" rx="1" fill="#5c4326"/></g></svg>`,
+    erosao: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Erosão">
+      <rect x="0" y="34" width="40" height="30" fill="#b5651d"/><rect x="0" y="34" width="40" height="6" fill="#7a9e5a"/>
+      <path d="M40 34 q-6 14 0 30 H64 V34 Z" fill="#2f8f9d" opacity=".7"/>
+      <g class="a-wash"><circle cx="44" cy="44" r="2" fill="#8a6d3b"/><circle cx="50" cy="52" r="2" fill="#b5651d"/><circle cx="46" cy="58" r="1.6" fill="#8a6d3b"/></g></svg>`
+  };
+
   // Processos perigosos
   document.getElementById("processos-perigosos").innerHTML = D.processosPerigosos.map(p => `
     <article class="perigo reveal">
-      <span class="perigo__icone">${p.icone}</span>
+      <div class="perigo__anim">${ANIM[p.anim] || ""}</div>
       <h4>${p.nome}</h4>
       <p>${p.desc}</p>
     </article>`).join("");
