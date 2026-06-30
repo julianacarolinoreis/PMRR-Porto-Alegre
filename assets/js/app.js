@@ -96,12 +96,18 @@
       <g class="a-rise"><path d="M0 40 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#2f8f9d" opacity=".55"/>
       <path d="M0 46 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#1b7a5a" opacity=".7"/></g></svg>`,
     enxurrada: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Enxurrada">
-      <polygon points="0,52 64,16 64,64 0,64" fill="#b5651d"/><polygon points="0,60 64,28 64,64 0,64" fill="#8a6d3b"/>
-      <g transform="rotate(-26 12 47)"><rect x="7" y="42" width="9" height="7" fill="#efe9dc"/><polygon points="6,42 11.5,37 17,42" fill="#9c4f2a"/></g>
-      <g transform="rotate(-26 25 39)"><rect x="21" y="35" width="8" height="6" fill="#efe9dc"/><polygon points="20,35 25,30.5 30,35" fill="#9c4f2a"/></g>
-      <g class="a-flood">
-        <path d="M64 2 L64 20 C 48 26 34 33 22 41 C 16 45 11 48 7 47 C 4 46 3 44 4 42 C 14 36 30 27 46 18 C 53 14 59 9 64 5 Z" fill="#2f8f9d"/>
-        <path class="ff2" d="M64 8 L64 19 C 49 25 36 32 25 40 C 19 44 13 47 9 46 C 12 43 18 40 26 34 C 38 26 51 18 64 11 Z" fill="#3aa6b5" opacity=".8"/>
+      <rect x="0" y="0" width="64" height="64" fill="#cdb89a"/>
+      <polygon points="0,0 24,0 16,64 0,64" fill="#b5651d"/>
+      <polygon points="40,0 64,0 64,64 48,64" fill="#b5651d"/>
+      <polygon points="0,0 19,0 11,64 0,64" fill="#9c6b34"/>
+      <polygon points="45,0 64,0 64,64 53,64" fill="#9c6b34"/>
+      <polygon points="20,0 44,0 52,64 12,64" fill="#2f8f9d"/>
+      <polygon points="24,0 40,0 47,64 17,64" fill="#3aa6b5" opacity=".5"/>
+      <g class="a-debris">
+        <g class="dbz"><rect x="27" y="-2" width="11" height="3.4" rx="1.5" transform="rotate(13 32 -0.3)" fill="#6b4a2a"/></g>
+        <g class="dbz"><rect x="23" y="-2" width="9" height="3" rx="1.5" transform="rotate(-17 27 -0.5)" fill="#7a5230"/></g>
+        <g class="dbz"><rect x="31" y="-2" width="10" height="3.2" rx="1.5" transform="rotate(8 36 -0.4)" fill="#5c3f22"/></g>
+        <g class="dbz"><circle cx="30" cy="-1" r="2.3" fill="#8a6d3b"/></g>
       </g></svg>`,
     alagamento: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Alagamento">
       <rect x="2" y="12" width="17" height="34" fill="#d8d0c0"/><rect x="6" y="17" width="4" height="4" fill="#9bbcd0"/><rect x="12" y="17" width="4" height="4" fill="#9bbcd0"/>
@@ -174,6 +180,40 @@
       <span class="particip__icone">${p.icone}</span>
       <div><b>${p.titulo}</b><p>${p.desc}</p></div>
     </div>`).join("");
+
+  // Infraestrutura urbana (barras comparativas) — Censo 2022
+  const infraEl = document.getElementById("infra");
+  if (infraEl && D.demografia && D.demografia.infra) {
+    const maxV = Math.max(...D.demografia.infra.flatMap(i => [i.risco, i.resto]));
+    infraEl.innerHTML = D.demografia.infra.map(i => `
+      <div class="infra__item">
+        <span class="infra__label">${i.label}</span>
+        <div class="infra__bars">
+          <div class="infra__bar infra__bar--risco" style="--w:${(i.risco / maxV * 100).toFixed(1)}%"><b>${i.risco.toLocaleString("pt-BR")}%</b></div>
+          <div class="infra__bar infra__bar--resto" style="--w:${(i.resto / maxV * 100).toFixed(1)}%"><b>${i.resto.toLocaleString("pt-BR")}%</b></div>
+        </div>
+      </div>`).join("");
+  }
+
+  // Glossário ilustrado
+  const glossEl = document.getElementById("glossario-grid");
+  if (glossEl && D.glossario) {
+    glossEl.innerHTML = D.glossario.map(g => `
+      <div class="gloss reveal">
+        <div class="gloss__icone">${g.anim && ANIM[g.anim] ? ANIM[g.anim] : `<span class="gloss__emoji">${g.icone || "•"}</span>`}</div>
+        <div class="gloss__txt"><b>${g.termo}</b><p>${g.def}</p></div>
+      </div>`).join("");
+  }
+
+  // Perguntas frequentes (acordeão nativo)
+  const faqEl = document.getElementById("faq-grid");
+  if (faqEl && D.faq) {
+    faqEl.innerHTML = D.faq.map(f => `
+      <details class="faq__item">
+        <summary>${f.q}<span class="faq__chevron" aria-hidden="true">+</span></summary>
+        <div class="faq__a"><p>${f.a}</p></div>
+      </details>`).join("");
+  }
 
   // Tabela filtrável das 24 medidas
   const filtroRegiao = document.getElementById("filtroRegiao");
@@ -505,10 +545,13 @@
   // Detalhe de um setor (com as medidas previstas para ele)
   function showSetor(p) {
     const meds = medidasDoSetor(p.setor);
+    const reg = regiaoDoBairro(p.bairro);
     const medHtml = meds.length ? `
       <p class="map-side__sub">Medidas previstas para este setor</p>
-      <ul class="map-side__med">${meds.map(m => `<li><span>${m.intervencao}</span><b>${BRL.format(m.custo)}</b></li>`).join("")}</ul>`
-      : `<p class="map-side__ctx">As medidas estruturais detalhadas estão organizadas por setor na seção “Medidas”.</p>`;
+      <ul class="map-side__med">${meds.map(m => `<li><span>${m.intervencao}</span><b>${BRL.format(m.custo)}</b></li>`).join("")}</ul>
+      <button class="map-side__link" data-regiao="${reg}">Ver na tabela de medidas ↓</button>`
+      : `<p class="map-side__ctx">As medidas estruturais detalhadas estão organizadas por setor na seção “Medidas”.</p>
+      <button class="map-side__link" data-regiao="${reg}">Abrir a tabela de medidas ↓</button>`;
     side.innerHTML = `
       <span class="map-side__id">Setor ${p.setor}</span>
       <h3>${p.bairro}</h3>
@@ -520,6 +563,19 @@
       ${medHtml}`;
   }
 
+  // Clique no botão do painel → filtra a tabela pela região e rola até ela
+  side.addEventListener("click", (e) => {
+    const btn = e.target.closest(".map-side__link");
+    if (!btn) return;
+    const reg = btn.dataset.regiao;
+    const sel = document.getElementById("filtroRegiao");
+    if (sel && reg && [...sel.options].some(o => o.value === reg)) {
+      sel.value = reg;
+      sel.dispatchEvent(new Event("change"));
+    }
+    document.getElementById("acoes").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
   fetch("assets/data/setores.geojson")
     .then(res => res.json())
     .then(geo => {
@@ -530,9 +586,10 @@
           const reg = regiaoPorNomeBairro(p.bairro);
           if (reg) (regionLayers[reg.id] = regionLayers[reg.id] || []).push(layer);
           todasLayers.push({ layer, props: p });
-          layer.bindPopup(
+          layer.bindTooltip(
             `<b>Setor ${p.setor}</b> · ${p.bairro}<br>${p.grau} risco` +
-            (p.pessoas != null ? `<br>${NUM.format(p.pessoas)} pessoas · ${NUM.format(p.edif)} edificações` : "")
+            (p.pessoas != null ? `<br>${NUM.format(p.pessoas)} pessoas · ${NUM.format(p.edif)} edificações` : ""),
+            { sticky: true, direction: "top", opacity: .95, className: "map-tip" }
           );
           layer.on("click", () => showSetor(p));
           layer.on("mouseover", () => layer.setStyle({ fillOpacity: .85, weight: 1.6 }));

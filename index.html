@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/vendor/leaflet.css" />
-  <link rel="stylesheet" href="assets/css/style.css?v=7" />
+  <link rel="stylesheet" href="assets/css/style.css?v=8" />
 </head>
 <body>
   <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
@@ -180,6 +180,19 @@
             faixas de vulnerabilidade média, alta ou muito alta.
           </p>
         </div>
+      </div>
+
+      <div class="card infra-card">
+        <h3>Infraestrutura urbana nas áreas de risco</h3>
+        <p class="card__lead">
+          Comparação entre os setores em área de risco e os demais setores do município,
+          a partir do Censo Demográfico 2022 (IBGE).
+        </p>
+        <div class="infra" id="infra"></div>
+        <p class="infra-legenda">
+          <span><i class="infra-dot infra-dot--risco"></i> Áreas de risco</span>
+          <span><i class="infra-dot infra-dot--resto"></i> Demais setores do município</span>
+        </p>
       </div>
     </div>
   </section>
@@ -426,6 +439,20 @@
     </div>
   </section>
 
+  <!-- GLOSSÁRIO -->
+  <section class="section" id="glossario">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Glossário</span>
+        <h2>Entenda os termos</h2>
+        <p class="section__intro">
+          Um guia rápido das palavras usadas no Plano para falar de risco, ameaças e medidas.
+        </p>
+      </div>
+      <div class="glossario" id="glossario-grid"></div>
+    </div>
+  </section>
+
   <!-- PROTEÇÃO -->
   <section class="section section--dark" id="protecao">
     <div class="container">
@@ -443,6 +470,20 @@
         <li>Não jogue lixo ou entulho em arroios, valas e bocas de lobo.</li>
         <li>Comunique à Defesa Civil rachaduras, barrancos instáveis e entulho nos arroios.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- PERGUNTAS FREQUENTES -->
+  <section class="section section--alt" id="duvidas">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">Perguntas frequentes</span>
+        <h2>Dúvidas comuns</h2>
+        <p class="section__intro">
+          Respostas rápidas sobre o Plano, as áreas de risco e o que a população pode fazer.
+        </p>
+      </div>
+      <div class="faq" id="faq-grid"></div>
     </div>
   </section>
 
@@ -494,7 +535,7 @@
 
   <script src="assets/vendor/leaflet.js"></script>
   <script src="assets/vendor/chart.umd.min.js"></script>
-  <script src="assets/js/data.js?v=7"></script>
-  <script src="assets/js/app.js?v=7"></script>
+  <script src="assets/js/data.js?v=8"></script>
+  <script src="assets/js/app.js?v=8"></script>
 </body>
 </html>

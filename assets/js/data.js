@@ -210,6 +210,12 @@ window.PMRR = (function () {
       { faixa: "Média",       intervalo: "0,300–0,400", n: 86,  pct: 27.1 },
       { faixa: "Alta",        intervalo: "0,400–0,500", n: 16,  pct: 5.0 },
       { faixa: "Muito alta",  intervalo: "acima de 0,500", n: 4, pct: 1.3 }
+    ],
+    // Indicadores de infraestrutura urbana (Censo 2022 / IBGE): % nos setores
+    // em área de risco vs. demais setores do município
+    infra: [
+      { label: "Domicílios sem rede de esgoto", risco: 22.9, resto: 4.8 },
+      { label: "Taxa de analfabetismo (15 anos ou mais)", risco: 8.5, resto: 2.9 }
     ]
   };
 
@@ -323,10 +329,35 @@ window.PMRR = (function () {
     periodo: "março/2024 a março/2026"
   };
 
+  // ===== Glossário (termos técnicos do Plano) =====
+  // anim = chave da ilustração animada (quando houver); senão usa icone
+  const glossario = [
+    { termo: "Inundação", anim: "inundacao", def: "Transbordamento das águas de um rio para áreas normalmente secas, geralmente de forma lenta e em grandes extensões." },
+    { termo: "Enxurrada", anim: "enxurrada", def: "Escoamento rápido e violento da água da chuva em terrenos íngremes, com grande poder de arraste." },
+    { termo: "Alagamento", anim: "alagamento", def: "Acúmulo de água em ruas e áreas urbanas por falhas ou insuficiência do sistema de drenagem." },
+    { termo: "Movimento de massa", anim: "deslizamento", def: "Deslocamento de solo, rocha ou entulho encosta abaixo (escorregamentos e quedas de blocos)." },
+    { termo: "Erosão", anim: "erosao", def: "Desgaste e arraste do solo pela ação da água, comum em margens de arroios e encostas sem proteção." },
+    { termo: "Setor de risco", icone: "📍", def: "Área delimitada no mapeamento onde há perigo de danos à população por processos geológicos ou hidrológicos." },
+    { termo: "Grau de risco (R3 e R4)", icone: "🎚️", def: "Classificação da gravidade: R3 é risco alto e R4 é risco muito alto, o nível mais crítico." },
+    { termo: "IVS — Índice de Vulnerabilidade Social", icone: "📊", def: "Indicador de 0 a 1 que mede a fragilidade social de um território; quanto maior, mais vulnerável." },
+    { termo: "Medida estrutural", icone: "🏗️", def: "Obra física de redução de risco, como muros de contenção, bacias de amortecimento ou drenagem." },
+    { termo: "Medida não estrutural", icone: "📋", def: "Ações de gestão, alerta, educação e organização comunitária que reduzem o risco sem obras." }
+  ];
+
+  // ===== Perguntas frequentes =====
+  const faq = [
+    { q: "O que é o PMRR?", a: "É o Plano Municipal de Redução de Riscos: um estudo técnico que mapeia as áreas de risco geológico e hidrológico de Porto Alegre e propõe medidas para reduzir os danos de desastres." },
+    { q: "Como foram escolhidas as áreas prioritárias?", a: "A partir de três critérios: ameaça iminente à vida, histórico de ocorrências confirmado pelas comunidades e carência de intervenção planejada pelo poder público." },
+    { q: "Minha casa aparece como área de risco. E agora?", a: "O mapeamento indica onde há maior necessidade de atenção e de obras. Mantenha-se atento aos alertas da Defesa Civil (telefone 199) e procure a subprefeitura da sua região para orientações." },
+    { q: "Quem fez o Plano?", a: "Foi realizado pela UFRGS em parceria com a Secretaria Nacional de Periferias (Ministério das Cidades) e apoio da Prefeitura de Porto Alegre, com participação das comunidades." },
+    { q: "Os dados do site são oficiais?", a: "Sim. Os números vêm do mapeamento do PMRR, do Serviço Geológico do Brasil (SGB) e do Censo Demográfico 2022 (IBGE). Valores por setor são estimativas técnicas e podem ser revisados." },
+    { q: "Como a população pode participar?", a: "Comunicando situações de risco à Defesa Civil, acompanhando os alertas, integrando os Núcleos Comunitários de Proteção e Defesa Civil (NUPDEC) e mantendo arroios e bocas de lobo desobstruídos." }
+  ];
+
   return {
     sintese, tipologia, regioes, criterios, processo, demografia, cidade, galeria, guia,
     processosPerigosos, solucoesEstruturais, solucoesNaoEstruturais, participacao,
-    medidas, medidasResumo, equipe,
+    medidas, medidasResumo, equipe, glossario, faq,
     etapas, produtos, materiais, contatos, creditos
   };
 })();
