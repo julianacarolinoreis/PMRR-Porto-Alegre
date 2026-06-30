@@ -96,11 +96,11 @@
       <g class="a-rise"><path d="M0 40 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#2f8f9d" opacity=".55"/>
       <path d="M0 46 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#1b7a5a" opacity=".7"/></g></svg>`,
     enxurrada: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Enxurrada">
-      <polygon points="0,0 0,64 22,64 27,0" fill="#b5651d"/><polygon points="64,0 64,64 42,64 37,0" fill="#9c5417"/>
-      <rect x="22" y="0" width="20" height="64" fill="#c9b48a"/>
-      <g class="a-rush"><path d="M22 -10 q5 7 10 0 q5 -7 10 0 V8 H22Z" fill="#1b7a5a"/>
-      <path d="M22 16 q5 7 10 0 q5 -7 10 0 V34 H22Z" fill="#2f8f9d"/>
-      <path d="M22 42 q5 7 10 0 q5 -7 10 0 V60 H22Z" fill="#1b7a5a"/></g></svg>`,
+      <path d="M0 64 Q16 16 32 14 Q48 16 64 64 Z" fill="#b5651d"/>
+      <path d="M7 64 Q21 30 32 27 Q43 30 57 64 Z" fill="#8a6d3b"/>
+      <path d="M27 16 Q24 40 20 64 L36 64 Q33 40 35 16 Z" fill="#2f8f9d" opacity=".9"/>
+      <g class="a-torrent"><circle cx="29" cy="26" r="2.6" fill="#fff" opacity=".9"/>
+      <circle cx="26" cy="40" r="2.2" fill="#dff3ee"/><circle cx="31" cy="52" r="2.4" fill="#fff" opacity=".85"/></g></svg>`,
     alagamento: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Alagamento">
       <rect x="2" y="12" width="17" height="34" fill="#d8d0c0"/><rect x="6" y="17" width="4" height="4" fill="#9bbcd0"/><rect x="12" y="17" width="4" height="4" fill="#9bbcd0"/>
       <rect x="45" y="8" width="17" height="38" fill="#cfc7b6"/><rect x="49" y="13" width="4" height="4" fill="#9bbcd0"/><rect x="55" y="13" width="4" height="4" fill="#9bbcd0"/>
@@ -140,8 +140,10 @@
       <g clip-path="url(#cl-bacia)"><rect class="b-fill" x="8" y="16" width="48" height="36" fill="#2f8f9d" opacity=".75"/></g></svg>`,
     armadilha: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Armadilha de lixo">
       <rect x="0" y="34" width="64" height="18" fill="#2f8f9d" opacity=".5"/>
-      <g stroke="#6b6b6b" stroke-width="2.5" stroke-linecap="round"><line x1="46" y1="32" x2="46" y2="54"/><line x1="51" y1="32" x2="51" y2="54"/></g>
-      <g class="t-trash"><rect x="2" y="40" width="5" height="5" fill="#b5651d"/><rect x="14" y="44" width="4" height="4" fill="#8a6d3b"/><circle cx="26" cy="42" r="2.6" fill="#6a994e"/></g></svg>`,
+      <g stroke="#5c5c5c" stroke-width="2.6" stroke-linecap="round"><line x1="44" y1="31" x2="44" y2="55"/><line x1="49" y1="31" x2="49" y2="55"/><line x1="54" y1="31" x2="54" y2="55"/></g>
+      <rect x="37" y="40" width="5" height="5" fill="#b5651d"/><circle cx="40" cy="48" r="2.4" fill="#6a994e"/>
+      <g class="t-trash"><rect x="2" y="42" width="5" height="5" fill="#8a6d3b"/></g>
+      <g class="t-trash2"><circle cx="6" cy="47" r="2.5" fill="#b5651d"/></g></svg>`,
     muro: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Muro de contenção">
       <polygon points="0,64 0,24 38,12 64,12 64,64" fill="#b5651d"/><polygon points="0,64 0,34 30,22 50,32 50,64" fill="#8a6d3b"/>
       <rect x="46" y="32" width="9" height="32" fill="#9a9a9a"/>
