@@ -96,18 +96,26 @@
       <g class="a-rise"><path d="M0 40 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#2f8f9d" opacity=".55"/>
       <path d="M0 46 q8 -4 16 0 t16 0 t16 0 t16 0 V64 H0Z" fill="#1b7a5a" opacity=".7"/></g></svg>`,
     enxurrada: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Enxurrada">
-      <rect x="0" y="0" width="64" height="64" fill="#cdb89a"/>
-      <polygon points="0,0 24,0 16,64 0,64" fill="#b5651d"/>
-      <polygon points="40,0 64,0 64,64 48,64" fill="#b5651d"/>
-      <polygon points="0,0 19,0 11,64 0,64" fill="#9c6b34"/>
-      <polygon points="45,0 64,0 64,64 53,64" fill="#9c6b34"/>
-      <polygon points="20,0 44,0 52,64 12,64" fill="#2f8f9d"/>
-      <polygon points="24,0 40,0 47,64 17,64" fill="#3aa6b5" opacity=".5"/>
-      <g class="a-debris">
-        <g class="dbz"><rect x="27" y="-2" width="11" height="3.4" rx="1.5" transform="rotate(13 32 -0.3)" fill="#6b4a2a"/></g>
-        <g class="dbz"><rect x="23" y="-2" width="9" height="3" rx="1.5" transform="rotate(-17 27 -0.5)" fill="#7a5230"/></g>
-        <g class="dbz"><rect x="31" y="-2" width="10" height="3.2" rx="1.5" transform="rotate(8 36 -0.4)" fill="#5c3f22"/></g>
-        <g class="dbz"><circle cx="30" cy="-1" r="2.3" fill="#8a6d3b"/></g>
+      <polygon points="0,40 64,12 64,64 0,64" fill="#9c9c9c"/>
+      <g transform="translate(9,32) rotate(-24)"><rect x="-5" y="-8" width="10" height="8" fill="#efe9dc"/><polygon points="-6,-8 0,-13 6,-8" fill="#9c4f2a"/></g>
+      <polygon points="0,48 64,20 64,64 0,64" fill="#2f8f9d"/>
+      <polygon points="0,56 64,28 64,64 0,64" fill="#1b7a5a" opacity=".45"/>
+      <g transform="translate(40,29) rotate(-24)"><g class="a-carro">
+        <rect x="-8" y="-5" width="16" height="5" rx="2" fill="#c94f3d"/>
+        <path d="M-4 -5 L-2.5 -8.5 H3 L5 -5 Z" fill="#d96a58"/>
+        <circle cx="-4.5" cy="0" r="2" fill="#3a3a3a"/><circle cx="4.5" cy="0" r="2" fill="#3a3a3a"/>
+      </g></g>
+      <g class="a-crista" fill="#3aa6b5">
+        <ellipse cx="-4" cy="49.8" rx="4.6" ry="2.4" transform="rotate(-24 -4 49.8)"/>
+        <ellipse cx="4" cy="46.3" rx="4.6" ry="2.4" transform="rotate(-24 4 46.3)"/>
+        <ellipse cx="12" cy="42.8" rx="4.6" ry="2.4" transform="rotate(-24 12 42.8)"/>
+        <ellipse cx="20" cy="39.3" rx="4.6" ry="2.4" transform="rotate(-24 20 39.3)"/>
+        <ellipse cx="28" cy="35.8" rx="4.6" ry="2.4" transform="rotate(-24 28 35.8)"/>
+        <ellipse cx="36" cy="32.3" rx="4.6" ry="2.4" transform="rotate(-24 36 32.3)"/>
+        <ellipse cx="44" cy="28.8" rx="4.6" ry="2.4" transform="rotate(-24 44 28.8)"/>
+        <ellipse cx="52" cy="25.3" rx="4.6" ry="2.4" transform="rotate(-24 52 25.3)"/>
+        <ellipse cx="60" cy="21.8" rx="4.6" ry="2.4" transform="rotate(-24 60 21.8)"/>
+        <ellipse cx="68" cy="18.3" rx="4.6" ry="2.4" transform="rotate(-24 68 18.3)"/>
       </g></svg>`,
     alagamento: `<svg viewBox="0 0 64 64" class="psvg" role="img" aria-label="Alagamento">
       <rect x="2" y="12" width="17" height="34" fill="#d8d0c0"/><rect x="6" y="17" width="4" height="4" fill="#9bbcd0"/><rect x="12" y="17" width="4" height="4" fill="#9bbcd0"/>
