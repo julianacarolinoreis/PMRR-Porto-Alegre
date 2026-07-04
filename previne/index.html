@@ -966,6 +966,49 @@
   }
   renderLb();
 
+  const MATDESC = {
+    'EXCEL':'planilha de origem dos dados', 'PLAN':'aba da planilha usada',
+    'input':'número de inputs da rede', 'faixaEntrada':'células dos inputs na planilha',
+    'faixaSaida':'células da saída (alvo)', 'CEL':'células auxiliares', 'SERIE':'células da coluna de série/conjunto',
+    'nh':'neurônios na camada oculta', 'nit':'inicializações independentes do treino',
+    'Cic':'ciclos máximos de treinamento', 'file':'caminho do próprio arquivo .mat',
+    'gravarExcel':'flag: gravar resultados no Excel', 'arquivoCSV':'CSV de resultados da rodada',
+    'DADOS':'matriz completa de dados da planilha', 'f':'folga dos limites de escalonamento',
+    'Prc':'precisão/taxa de aprendizado', 'Mom':'momentum do gradiente',
+    'X':'vetor auxiliar da série', 'treina':'conjunto de treino', 'valida':'conjunto de validação',
+    'verifica':'conjunto de teste (verificação)', 'i':'contador da inicialização retida',
+    'unisig':'função de ativação sigmóide', 'dunisig':'derivada da sigmóide',
+    'limsup':'limite superior com folga', 'liminf':'limite inferior com folga',
+    'esclin':'escalonamento linear (normalização)', 'reclin':'reescalonamento (desnormalização)',
+    'Pt':'inputs do treino (escalonados)', 'Tt':'alvo do treino', 'Ptv':'inputs da validação',
+    'Ttv':'alvo da validação', 'Pv':'inputs do teste', 'Tv':'alvo do teste',
+    'Ptot':'inputs da série completa', 'Ttot':'alvo da série completa',
+    'EVmin':'menor erro de validação atingido', 'As':'ativação da saída', 'Ds':'derivada da ativação da saída',
+    'Ah':'ativação da camada oculta', 'Dh':'derivada da ativação da oculta',
+    'Ut':'nível atual no treino (persistência)', 'Utv':'nível atual na validação', 'Uv':'nível atual no teste',
+    'Utot':'nível atual na série completa', 'ae':'coeficientes de escala dos inputs',
+    'be':'interceptos de escala dos inputs', 'ls':'limite superior da saída', 'li':'limite inferior da saída',
+    'au':'escala da saída', 'bu':'intercepto da saída',
+    'pt':'inputs do treino normalizados', 'ptv':'inputs da validação normalizados', 'pv':'inputs do teste normalizados',
+    'ptot':'série completa normalizada', 'tt':'alvo do treino normalizado', 'ttv':'alvo da validação normalizado',
+    'tv':'alvo do teste normalizado', 'ttot':'alvo completo normalizado',
+    'wh':'pesos da camada oculta', 'bh':'vieses da camada oculta',
+    'ws':'pesos da camada de saída', 'bs':'viés da saída', 'J':'custo final do treino',
+    'EQ':'curva do erro quadrático no treino, por ciclo', 'EV':'curva do erro na validação, por ciclo',
+    'TX':'taxa de aprendizado por ciclo', 'DE':'variação do erro por ciclo',
+    'ATUAL_TOT':'persistência (nível atual) na série completa', 'ATUAL_VER':'persistência no teste',
+    'ATUAL_VAL':'persistência na validação', 'Tctot1':'saída calculada na série completa',
+    'Tc1':'saída calculada no teste', 'Tcval1':'saída calculada na validação',
+    'Tv1':'alvo do teste (cm)', 'Ttv1':'alvo da validação (cm)',
+    'eabs':'erros absolutos no teste', 'p':'percentis analisados (50–100%)',
+    'emed_abs':'erro absoluto médio (cm)', 'g':'erro em cada percentil (cm)',
+    'e2':'erros quadráticos no teste', 'e2val':'erros quadráticos na validação',
+    'NASH':'Nash-Sutcliffe no teste', 'MPERS':'série da métrica de persistência',
+    'NASH_VAL':'Nash-Sutcliffe na validação', 'PERS':'índice de persistência no teste',
+    'CORRELACAO':'matriz de correlação obs × RNA', 'ERRO_RELATIVO':'erro relativo médio',
+    'emed_abs_mean':'erro absoluto médio normalizado', 'e95':'percentil 95 do erro absoluto (cm)',
+    'RESULTS':'vetor-resumo: NASH, PERS, correlação, erros, NASH_VAL, J'
+  };
   /* ---------------- base auditável (séries ponto a ponto) ---------------- */
   const AUDIT_URL='assets/data/auditaveis_series.json';
   let AUDIT=null, AUDIT_ERR=null, AUDIT_LOADING=null, AUDIT_IDX=null;
@@ -1258,38 +1301,37 @@
         (mt.mod?', gravado em '+mt.mod.replace('T',' '):'')+
         '). Ativação: sigmóide logística na camada oculta, linear na saída. Métricas do MATLAB calculadas nos recortes da própria rodada.';
       mb.appendChild(note);
-      if(mt.all && mt.all.length){
-        const det=document.createElement('details'); det.className='m-det';
-        const sum=document.createElement('summary'); sum.textContent='Todas as variáveis de métrica do .mat ('+mt.all.length+')';
+      if(mt.vars && mt.vars.length){
+        const det=document.createElement('details'); det.className='m-det'; det.open=true;
+        const sum=document.createElement('summary');
+        sum.textContent='Workspace do MATLAB — todas as '+mt.vars.length+' variáveis do .mat';
         det.appendChild(sum);
         const wrap=document.createElement('div'); wrap.className='det-wrap';
         const tb=document.createElement('table');
         const thr=document.createElement('tr');
-        ['Variável','Valor'].forEach(t=>{const th=document.createElement('th'); th.textContent=t; thr.appendChild(th);});
+        ['Variável','O que é','Dimensões','Valor'].forEach(t=>{const th=document.createElement('th'); th.textContent=t; thr.appendChild(th);});
         tb.appendChild(thr);
-        mt.all.forEach(([nm,vl])=>{
-          const tr=document.createElement('tr');
-          const t1=document.createElement('td'); t1.textContent=nm;
-          const t2=document.createElement('td'); t2.textContent=vl;
-          tr.append(t1,t2); tb.appendChild(tr);
-        });
-        wrap.appendChild(tb); det.appendChild(wrap); mb.appendChild(det);
-      }
-      if(mt.vars && mt.vars.length){
-        const det2=document.createElement('details'); det2.className='m-det';
-        const sum2=document.createElement('summary'); sum2.textContent='Estrutura do arquivo — todas as variáveis e dimensões ('+mt.vars.length+')';
-        det2.appendChild(sum2);
-        const wrap2=document.createElement('div'); wrap2.className='det-wrap';
-        const tb2=document.createElement('table');
-        const thr2=document.createElement('tr');
-        ['Variável','Classe','Dimensões'].forEach(t=>{const th=document.createElement('th'); th.textContent=t; thr2.appendChild(th);});
-        tb2.appendChild(thr2);
+        const valMap=new Map((mt.all||[]).map(([n,v])=>[n,v]));
         mt.vars.forEach(([nm,cl,sh])=>{
           const tr=document.createElement('tr');
-          [nm,cl,sh].forEach(x=>{const td=document.createElement('td'); td.textContent=x; tr.appendChild(td);});
-          tb2.appendChild(tr);
+          const t1=document.createElement('td'); t1.textContent=nm;
+          const t2=document.createElement('td'); t2.textContent=MATDESC[nm]||'';
+          const t3=document.createElement('td'); t3.textContent=(sh||'')+(cl?' ('+cl+')':'');
+          const t4=document.createElement('td');
+          t4.textContent = valMap.has(nm) ? valMap.get(nm) : 'valores completos no arquivo .mat';
+          if(!valMap.has(nm)) t4.style.color='var(--muted)';
+          tr.append(t1,t2,t3,t4); tb.appendChild(tr);
         });
-        wrap2.appendChild(tb2); det2.appendChild(wrap2); mb.appendChild(det2);
+        (mt.all||[]).forEach(([nm,v])=>{
+          if(mt.vars.some(x=>x[0]===nm)) return;
+          const tr=document.createElement('tr');
+          const t1=document.createElement('td'); t1.textContent=nm;
+          const t2=document.createElement('td'); t2.textContent=MATDESC[nm]||'';
+          const t3=document.createElement('td'); t3.textContent='';
+          const t4=document.createElement('td'); t4.textContent=v;
+          tr.append(t1,t2,t3,t4); tb.appendChild(tr);
+        });
+        wrap.appendChild(tb); det.appendChild(wrap); mb.appendChild(det);
       }
       box.appendChild(mb);
     }
