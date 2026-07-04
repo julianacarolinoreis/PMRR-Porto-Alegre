@@ -374,9 +374,9 @@
   <header class="hero">
     <p class="eyebrow">Previne · Bacia Taquari-Antas</p>
     <h1>Redes neurais de previsão de nível</h1>
-    <p class="sub">Varredura completa dos modelos RNA treinados para prever o nível do rio na bacia
-      Taquari-Antas com antecedência de 2h, 8h e 12h — somente rodadas com planilha auditável,
-      arquivo <span style="font-variant-numeric:tabular-nums">.mat</span> e métricas rastreáveis.</p>
+    <p class="sub">Varredura completa dos modelos RNA (MLP) treinados para prever o nível do rio Taquari em
+      <strong>Santa Tereza, RS</strong> — bacia de drenagem de ≈15.800 km² no Taquari-Antas — com antecedência de
+      2h, 8h e 12h. Somente rodadas com planilha auditável, arquivo <span style="font-variant-numeric:tabular-nums">.mat</span> e métricas rastreáveis.</p>
     <p class="stamp" id="stamp"></p>
   </header>
 
@@ -389,25 +389,29 @@
       <div class="step">
         <div class="s-num">Passo 1 · O problema</div>
         <div class="s-title">Antecipar o nível do rio</div>
-        <div class="s-text">Na bacia <strong>Taquari-Antas</strong> as cheias sobem rápido. Queremos prever o nível
-          do rio em <strong>Santa Tereza</strong> com <strong>2h, 8h e 12h de antecedência</strong>, usando só o que os
-          sensores já mediram: níveis de estações da bacia e chuva acumulada.</div>
+        <div class="s-text">As grandes inundações de <strong>2023 e 2024</strong> atingiram Muçum, Roca Sales,
+          Encantado, Lajeado e Santa Tereza — e mostraram a necessidade de ampliar o tempo de antecedência
+          dos alertas. Queremos prever o nível do rio em <strong>Santa Tereza</strong> com <strong>2h, 8h e 12h de
+          antecedência</strong>, usando só o que os sensores já mediram: níveis de estações da bacia e chuva acumulada.</div>
       </div>
       <div class="step">
         <div class="s-num">Passo 2 · O método</div>
         <div class="s-title">Como a rede neural aprende</div>
         <div class="net-diagram" id="net-diagram" role="img" aria-label="Diagrama de rede neural: inputs, camada oculta e saída"></div>
-        <div class="s-text">Cada modelo recebe de <strong>3 a 15 inputs</strong>, combina tudo numa camada oculta de
-          <strong>10 a 30 neurônios</strong> e produz uma única saída: o nível daqui a N horas. O treino (retropropagação,
-          em MATLAB) ajusta os pesos por até <strong>100 mil ciclos</strong>, minimizando o custo J.</div>
+        <div class="s-text">Perceptron multicamadas (MLP) de três camadas: cada modelo recebe de
+          <strong>3 a 15 inputs</strong>, combina tudo numa camada oculta de <strong>10 a 30 neurônios</strong> (ativação
+          sigmóide; saída linear) e produz o nível daqui a N horas. O treino por <strong>retropropagação com gradiente
+          descendente adaptativo</strong> (MATLAB) roda até <strong>100 mil ciclos</strong>, retendo o melhor ciclo pelo erro
+          quadrático médio na validação.</div>
       </div>
       <div class="step">
         <div class="s-num">Passo 3 · As duas linhas de modelos</div>
         <div class="s-title">Convencional × Alternativa</div>
-        <div class="s-text">Para cada antecedência existem <strong>duas linhas de modelos independentes</strong>: a
-          <strong>convencional (CONV)</strong> e a <strong>alternativa (ALT)</strong>. Elas diferem na forma de montar e combinar
-          os inputs que alimentam a rede, foram treinadas em rodadas próprias e <strong>nunca se misturam</strong> —
-          cada família tem seus quadros, seus rankings e seu modelo de referência ao longo de todo o site.</div>
+        <div class="s-text">A <strong>convencional (CONV)</strong> usa chuva acumulada e níveis de estações vizinhas
+          da bacia das Antas (Antônio Prado, Nova Roma do Sul, Veranópolis, Caxias do Sul, Muitos Capões e
+          Cotiporã), com o histórico dividido em subséries associadas a eventos. A <strong>alternativa (ALT)</strong> usa a
+          <strong>série contínua de hidrotelemetria de alta frequência</strong> das estações a montante. A comparação mede
+          o ganho dos dados telemétricos — e as duas linhas <strong>nunca se misturam</strong> nos quadros do site.</div>
       </div>
       <div class="step">
         <div class="s-num">Passo 4 · A avaliação</div>
@@ -539,6 +543,7 @@
       <li>HORNIK, K.; STINCHCOMBE, M.; WHITE, H. Multilayer feedforward networks are universal approximators. <em>Neural Networks</em>, v. 2, n. 5, p. 359–366, 1989. <span class="r-note">por que uma camada oculta basta em princípio</span></li>
       <li>ASCE TASK COMMITTEE ON APPLICATION OF ARTIFICIAL NEURAL NETWORKS IN HYDROLOGY. Artificial neural networks in hydrology I: Preliminary concepts; II: Hydrologic applications. <em>Journal of Hydrologic Engineering</em>, v. 5, n. 2, p. 115–137, 2000.</li>
       <li>MAIER, H. R.; DANDY, G. C. Neural networks for the prediction and forecasting of water resources variables: a review of modelling issues and applications. <em>Environmental Modelling &amp; Software</em>, v. 15, n. 1, p. 101–124, 2000. <span class="r-note">guia para escolha de inputs e arquitetura</span></li>
+      <li>OLIVEIRA, G. G.; PEDROLLO, O. C.; CASTRO, N. M. R. O desempenho das redes neurais artificiais (RNAs) para simulação hidrológica mensal. <em>RBRH — Revista Brasileira de Recursos Hídricos</em>, v. 19, n. 2, p. 251–265, 2014. <span class="r-note">RNA em hidrologia no contexto gaúcho, base do grupo de pesquisa</span></li>
       <li>DAWSON, C. W.; WILBY, R. L. Hydrological modelling using artificial neural networks. <em>Progress in Physical Geography</em>, v. 25, n. 1, p. 80–108, 2001. <span class="r-note">protocolo de avaliação com múltiplas métricas, como o desta varredura</span></li>
     </ul>
   </section>
@@ -550,10 +555,12 @@
       <dt>PERS geral / validação / teste</dt><dd>A mesma métrica calculada em todas as linhas auditáveis, só nas linhas de validação e só nas de teste.</dd>
       <dt>Score de equilíbrio</dt><dd>O menor valor entre PERS geral, validação e teste — modelo bom de verdade precisa ir bem nos três.</dd>
       <dt>MAE / E95</dt><dd>Erro absoluto médio e percentil 95 do erro absoluto, em centímetros de nível.</dd>
-      <dt>ALT / CONV</dt><dd>As duas famílias de arquitetura/montagem de inputs comparadas na varredura.</dd>
+      <dt>ALT / CONV</dt><dd>Alternativa: série contínua de hidrotelemetria de alta frequência das estações a montante. Convencional: chuva acumulada e níveis de estações vizinhas, com o histórico dividido em subséries por evento.</dd>
       <dt>D-n / A-n</dt><dd>Variantes defasadas/derivadas do nível da estação (ex.: D-1h, A-12h), conforme a montagem de inputs de cada rodada.</dd>
     </dl>
     <p class="src" id="src"></p>
+    <p class="src">Equipe: Juliana Carolino Reis · Guilherme Garcia de Oliveira · Fernanda Vier · Josiane Leci Vanin Barbieri.
+      Pesquisa financiada pela FAPERGS (processo nº 24/2551-0002124-8).</p>
   </section>
 </div>
 
@@ -768,7 +775,9 @@
         {stat:'0,370 vs −0,003', title:'CONV decora, ALT generaliza',
          text:'O 8h CONV ganha no geral (0,735 contra 0,454), mas no equilíbrio a ALT faz 0,370 e a CONV cai a −0,003 — sinal clássico de sobreajuste da convencional.'},
         {stat:'10 inputs', title:'O campeão do 8h é enxuto',
-         text:'O modelo mais equilibrado da varredura (0,694) usa só 10 inputs e 20 neurônios — menos que a mediana da família.'}]},
+         text:'O modelo mais equilibrado da varredura (0,694) usa só 10 inputs e 20 neurônios — menos que a mediana da família.'},
+        {stat:'46 vs 116 cm', title:'Nos extremos, a CONV é mais robusta',
+         text:'Entre os candidatos operacionais de 8h, o menor E95 da CONV é 46 cm contra 116 cm da ALT — a série histórica mais longa compensa a menor resolução temporal na hora dos erros extremos.'}]},
       {title:'O que o 12h ensinou · 47 modelos', h:'12h', items:[
         {stat:'−0,472', title:'Chuva é obrigatória no 12h',
          text:'Sem o input de chuva, a persistência mediana no teste é negativa (−0,472) — pior que não ter modelo. Com chuva, sobe para 0,508.'},
@@ -793,7 +802,8 @@
     const limits=[
       'Os horizontes têm quantidades de modelos diferentes (139 no 8h, 49 no 2h, 47 no 12h), então a comparação entre horizontes é indicativa, não um teste controlado.',
       'Os eventos de cheia disponíveis são poucos; persistência calculada sobre poucos eventos de teste tem incerteza alta, especialmente no 12h.',
-      'As comparações com/sem chuva usam poucos modelos sem chuva (7 no 2h, 10 no 8h, 2 no 12h) — leia como indício forte, não como experimento controlado.'
+      'As comparações com/sem chuva usam poucos modelos sem chuva (7 no 2h, 10 no 8h, 2 no 12h) — leia como indício forte, não como experimento controlado.',
+      'Próximos passos da pesquisa: completar treinamento e auditoria das duas abordagens nos horizontes de 4h e 12h, e validar os modelos selecionados em novos eventos de cheia.'
     ];
     const root=document.getElementById('finds-root');
     GROUPS.forEach(g=>{
