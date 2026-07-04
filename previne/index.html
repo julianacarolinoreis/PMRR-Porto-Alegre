@@ -1,19 +1,21 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><title>PREVINE Taquari-Antas — Redes Neurais</title>
 <!-- auditável integrado nesta página; guards de injeção: assets/css/audit_charts.css assets/js/audit_charts.js -->
 
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --page:#edf0e4; --surface:#fdfdf9; --surface-2:#f2f4ea;
-    --ink:#151812; --ink-2:#4e564a; --muted:#89907f;
-    --grid:#e5e8db; --baseline:#c6cbb8; --border:rgba(21,24,18,.10);
-    --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
-    --chrome:#1e5b3c; --chrome-soft:rgba(30,91,60,.10);
-    --hero:#17422e; --hero-ink:#f2f7ee; --hero-muted:#a9c9ae; --hero-eyebrow:#8fd6a4;
+    --page:#f5f3ec; --surface:#ffffff; --surface-2:#f2efe6;
+    --ink:#16241f; --ink-2:#4a5b53; --muted:#8b968f;
+    --grid:#e3e6e0; --baseline:#c3cbc3; --border:rgba(16,59,48,.10);
+    --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10); --amber:#e8a317;
+    --chrome:#1b7a5a; --chrome-soft:rgba(27,122,90,.10);
+    --hero:linear-gradient(140deg,#0c2a22 0%,#103b30 45%,#155c47 100%); --hero-solid:#0c2a22;
+    --hero-ink:#ffffff; --hero-muted:#cfe0d2; --hero-eyebrow:#7cc6a6;
     --s-2h:#2532e4; --s-4h:#1f8d49; --s-8h:#c78d00; --s-12h:#d4271e; --s-2h-soft:#99a0f2; --s-8h-soft:#e6c878; --s-12h-soft:#efa39c;
     --good:#0ca30c; --warn:#fab219; --off:#898781;
     --good-bg:rgba(12,163,12,.12); --warn-bg:rgba(250,178,25,.16); --off-bg:rgba(137,135,129,.16);
     --bad:#c23a3a; --err-mae:#2a78d6; --err-e95:#4a3aa7;
-    --shadow:0 1px 2px rgba(16,20,24,.05),0 4px 14px rgba(16,20,24,.05);
+    --shadow:0 10px 30px rgba(16,59,48,.08);
   }
   @media (prefers-color-scheme: dark){
     :root{
@@ -21,46 +23,49 @@
       --ink:#eff4ec; --ink-2:#b7c1b4; --muted:#828c80;
       --grid:#252d26; --baseline:#39443a; --border:rgba(255,255,255,.10);
       --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
-      --chrome:#63c88b; --chrome-soft:rgba(99,200,139,.14);
-      --hero:#123425; --hero-ink:#eff6ee; --hero-muted:#93b799; --hero-eyebrow:#7ecf96;
+      --chrome:#63c88b; --chrome-soft:rgba(99,200,139,.14); --amber:#e8a317;
+      --hero:linear-gradient(140deg,#081d17 0%,#0c2a22 50%,#124534 100%); --hero-solid:#081d17;
+      --hero-ink:#f2f7ee; --hero-muted:#a9c9ae; --hero-eyebrow:#7ecf96;
       --s-2h:#5a6bff; --s-4h:#32a65e; --s-8h:#c98500; --s-12h:#f0554d; --s-2h-soft:#99a0f2; --s-8h-soft:#e6c878; --s-12h-soft:#efa39c;
       --good:#0ca30c; --warn:#fab219; --off:#8f9791;
       --good-bg:rgba(12,163,12,.18); --warn-bg:rgba(250,178,25,.14); --off-bg:rgba(143,151,145,.16);
       --bad:#e66767; --err-mae:#3987e5; --err-e95:#9085e9;
-      --shadow:0 1px 2px rgba(0,0,0,.35),0 4px 14px rgba(0,0,0,.30);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
     }
   }
   :root[data-theme="light"]{
-    --page:#edf0e4; --surface:#fdfdf9; --surface-2:#f2f4ea;
-    --ink:#151812; --ink-2:#4e564a; --muted:#89907f;
-    --grid:#e5e8db; --baseline:#c6cbb8; --border:rgba(21,24,18,.10);
-    --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
-    --chrome:#1e5b3c; --chrome-soft:rgba(30,91,60,.10);
-    --hero:#17422e; --hero-ink:#f2f7ee; --hero-muted:#a9c9ae; --hero-eyebrow:#8fd6a4;
+    --page:#f5f3ec; --surface:#ffffff; --surface-2:#f2efe6;
+    --ink:#16241f; --ink-2:#4a5b53; --muted:#8b968f;
+    --grid:#e3e6e0; --baseline:#c3cbc3; --border:rgba(16,59,48,.10);
+    --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10); --amber:#e8a317;
+    --chrome:#1b7a5a; --chrome-soft:rgba(27,122,90,.10);
+    --hero:linear-gradient(140deg,#0c2a22 0%,#103b30 45%,#155c47 100%); --hero-solid:#0c2a22;
+    --hero-ink:#ffffff; --hero-muted:#cfe0d2; --hero-eyebrow:#7cc6a6;
     --s-2h:#2532e4; --s-4h:#1f8d49; --s-8h:#c78d00; --s-12h:#d4271e; --s-2h-soft:#99a0f2; --s-8h-soft:#e6c878; --s-12h-soft:#efa39c;
     --good:#0ca30c; --warn:#fab219; --off:#898781;
     --good-bg:rgba(12,163,12,.12); --warn-bg:rgba(250,178,25,.16); --off-bg:rgba(137,135,129,.16);
     --bad:#c23a3a; --err-mae:#2a78d6; --err-e95:#4a3aa7;
-    --shadow:0 1px 2px rgba(16,20,24,.05),0 4px 14px rgba(16,20,24,.05);
+    --shadow:0 10px 30px rgba(16,59,48,.08);
   }
   :root[data-theme="dark"]{
     --page:#0c110d; --surface:#151b16; --surface-2:#1b231c;
     --ink:#eff4ec; --ink-2:#b7c1b4; --muted:#828c80;
     --grid:#252d26; --baseline:#39443a; --border:rgba(255,255,255,.10);
     --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
-    --chrome:#63c88b; --chrome-soft:rgba(99,200,139,.14);
-    --hero:#123425; --hero-ink:#eff6ee; --hero-muted:#93b799; --hero-eyebrow:#7ecf96;
+    --chrome:#63c88b; --chrome-soft:rgba(99,200,139,.14); --amber:#e8a317;
+    --hero:linear-gradient(140deg,#081d17 0%,#0c2a22 50%,#124534 100%); --hero-solid:#081d17;
+    --hero-ink:#f2f7ee; --hero-muted:#a9c9ae; --hero-eyebrow:#7ecf96;
     --s-2h:#5a6bff; --s-4h:#32a65e; --s-8h:#c98500; --s-12h:#f0554d; --s-2h-soft:#99a0f2; --s-8h-soft:#e6c878; --s-12h-soft:#efa39c;
     --good:#0ca30c; --warn:#fab219; --off:#8f9791;
     --good-bg:rgba(12,163,12,.18); --warn-bg:rgba(250,178,25,.14); --off-bg:rgba(143,151,145,.16);
     --bad:#e66767; --err-mae:#3987e5; --err-e95:#9085e9;
-    --shadow:0 1px 2px rgba(0,0,0,.35),0 4px 14px rgba(0,0,0,.30);
+    --shadow:0 10px 30px rgba(0,0,0,.35);
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
   body{
     background:var(--page); color:var(--ink);
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     font-size:15px; line-height:1.5;
     -webkit-font-smoothing:antialiased;
   }
@@ -69,14 +74,16 @@
 
   /* ---------- header (hero MapBiomas) ---------- */
   .hero{
-    background:var(--hero);color:var(--hero-ink);border-radius:14px;
+    background:var(--hero);color:var(--hero-ink);border-radius:20px;
     padding:30px 30px 26px;box-shadow:var(--shadow);
   }
   .eyebrow{
     font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
     color:var(--hero-eyebrow);margin:0 0 6px;
   }
-  h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;margin:0 0 6px;text-wrap:balance}
+  h1,.sec>h2,.k-value,.champ .big,.find .f-stat{font-family:"Sora","Inter",system-ui,sans-serif}
+  h1{font-size:clamp(26px,3.6vw,38px);font-weight:800;letter-spacing:-.01em;margin:0 0 8px;text-wrap:balance}
+  h1 .hl{color:var(--amber)}
   .sub{color:var(--hero-muted);margin:0;max-width:70ch}
   .sub strong{color:var(--hero-ink)}
   .stamp{color:var(--hero-muted);opacity:.85;font-size:13px;margin-top:12px}
@@ -84,23 +91,28 @@
   /* ---------- KPI row ---------- */
   .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:26px 0 8px}
   .kpi{
-    background:var(--surface);border:1px solid var(--border);border-radius:10px;
-    padding:14px 16px;box-shadow:var(--shadow);
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:16px 18px;box-shadow:var(--shadow);
   }
   .kpi .k-label{font-size:12.5px;color:var(--ink-2);margin-bottom:2px}
   .kpi .k-value{font-size:30px;font-weight:650;letter-spacing:-.01em;line-height:1.15}
   .kpi .k-note{font-size:12.5px;color:var(--muted);margin-top:2px}
 
   /* ---------- sections ---------- */
-  .sec{margin-top:48px}
+  .sec{margin-top:52px}
+  .kicker{
+    display:table;margin:0 auto 12px;background:var(--chrome-soft);color:var(--chrome);
+    font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    border-radius:999px;padding:6px 16px;
+  }
   .sec>h2{font-size:21px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px;text-align:center}
   .sec>.sec-sub{color:var(--ink-2);font-size:13.5px;margin:0 auto 20px;max-width:78ch;text-align:center}
 
   /* ---------- champion cards ---------- */
   .champs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
   .champ{
-    background:var(--surface);border:1px solid var(--border);border-radius:10px;
-    padding:16px;box-shadow:var(--shadow);position:relative;
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:18px;box-shadow:var(--shadow);position:relative;
   }
   .champ .horizon{display:flex;align-items:center;gap:8px;font-weight:650;font-size:15px}
   .champ .dot{width:10px;height:10px;border-radius:50%;flex:none}
@@ -155,7 +167,7 @@
   .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}
   @media (max-width:560px){ .grid2{grid-template-columns:1fr} }
   figure.card{
-    margin:0;background:var(--surface);border:1px solid var(--border);border-radius:10px;
+    margin:0;background:var(--surface);border:1px solid var(--border);border-radius:16px;
     padding:18px 18px 12px;box-shadow:var(--shadow);min-width:0;
   }
   figure.card figcaption{margin-bottom:2px}
@@ -186,7 +198,7 @@
 
   /* ---------- entenda a pesquisa ---------- */
   .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
-  .step{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;box-shadow:var(--shadow)}
+  .step{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
   .step .s-num{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--chrome)}
   .step .s-title{font-weight:650;font-size:15px;margin:4px 0 6px}
   .step .s-text{font-size:13px;color:var(--ink-2);line-height:1.55}
@@ -202,8 +214,8 @@
   .finds-h .hdot{width:9px;height:9px}
   .finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
   .find{
-    background:var(--surface);border:1px solid var(--border);border-radius:10px;
-    padding:16px;box-shadow:var(--shadow);border-top:3px solid var(--chrome);
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:18px;box-shadow:var(--shadow);border-top:3px solid var(--chrome);
   }
   .find .f-stat{font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--chrome);font-variant-numeric:tabular-nums}
   .find .f-title{font-weight:650;font-size:14.5px;margin-top:2px}
@@ -224,7 +236,7 @@
   .tab:hover{background:var(--surface-2)}
   .tab[aria-pressed="true"]{background:var(--chrome);border-color:var(--chrome);color:#fff}
   .lb-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-  .lb-group{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
+  .lb-group{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
   .lb-group .g-head{display:flex;align-items:center;gap:8px;font-weight:650;font-size:15px;margin-bottom:10px}
   .lb-group .g-head .dot{width:10px;height:10px;border-radius:50%;flex:none}
   .lb-group .g-head .g-n{margin-left:auto;font-size:12px;font-weight:500;color:var(--muted)}
@@ -326,7 +338,7 @@
   }
   .search::placeholder{color:var(--muted)}
   .twrap{
-    background:var(--surface);border:1px solid var(--border);border-radius:10px;
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
     box-shadow:var(--shadow);overflow:auto;max-height:560px;
   }
   table{border-collapse:collapse;width:100%;min-width:980px;font-size:13px}
@@ -365,7 +377,7 @@
   @media (max-width:640px){ .notes dl{grid-template-columns:1fr} .notes dd{margin-bottom:6px} }
   .src{color:var(--muted);font-size:12px;margin-top:16px}
   .footer{
-    background:var(--hero);color:var(--hero-muted);border-radius:14px;
+    background:var(--hero);color:var(--hero-muted);border-radius:20px;
     padding:26px 30px;margin-top:40px;box-shadow:var(--shadow);
     display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     font-size:13px;line-height:1.6;
@@ -381,7 +393,7 @@
 <div class="wrap">
   <header class="hero">
     <p class="eyebrow">Previne · Bacia Taquari-Antas</p>
-    <h1>Redes neurais de previsão de nível</h1>
+    <h1>Redes neurais de <span class="hl">previsão de nível</span></h1>
     <p class="sub">Varredura completa dos modelos RNA (MLP) treinados para prever o nível do rio Taquari em
       <strong>Santa Tereza, RS</strong> — bacia de drenagem de ≈15.800 km² no Taquari-Antas — com antecedência de
       2h, 8h e 12h. Somente rodadas com planilha auditável, arquivo <span style="font-variant-numeric:tabular-nums">.mat</span> e métricas rastreáveis.</p>
@@ -391,6 +403,7 @@
   <div class="kpis" id="kpis"></div>
 
   <section class="sec">
+    <span class="kicker">o método</span>
     <h2>Entenda a pesquisa</h2>
     <p class="sec-sub">O caminho completo, do problema ao resultado — para quem chega agora no projeto.</p>
     <div class="steps">
@@ -443,6 +456,7 @@
   </section>
 
   <section class="sec">
+    <span class="kicker">os melhores</span>
     <h2>Desempenho por família</h2>
     <p class="sec-sub">Todos os modelos de cada família com a métrica escolhida <strong>acima de 0,500</strong> (até dez
       por quadro). Alternativa e convencional aparecem separadas — são modelos diferentes, de rodadas próprias.
@@ -453,6 +467,7 @@
   </section>
 
   <section class="sec">
+    <span class="kicker">referência</span>
     <h2>Modelo de referência de cada família</h2>
     <p class="sec-sub">Os três modelos mais equilibrados de cada família pelo <strong>score de equilíbrio</strong> — o menor
       valor de persistência entre geral, validação e teste, para evitar escolher modelo que só vai bem em um recorte.</p>
@@ -460,6 +475,7 @@
   </section>
 
   <section class="sec">
+    <span class="kicker">achados</span>
     <h2>Principais achados</h2>
     <p class="sec-sub">O que 235 modelos em 8 rodadas ensinaram, horizonte por horizonte — e o que ainda não
       funcionou. Cada número sai direto do planilhão; resultado negativo também é resultado.</p>
@@ -469,7 +485,8 @@
   </section>
 
   <section class="sec">
-    <h2>Exploração dos 239 modelos</h2>
+    <span class="kicker">explore os dados</span>
+    <h2>Exploração dos 235 modelos</h2>
     <p class="sec-sub">Os filtros abaixo recortam todos os gráficos e a tabela ao mesmo tempo.</p>
 
     <div class="filters" id="filters">
@@ -529,6 +546,7 @@
   </section>
 
   <section class="sec">
+    <span class="kicker">tabela completa</span>
     <h2>Todos os modelos</h2>
     <p class="sec-sub">Tabela completa do recorte atual — clique nos cabeçalhos para ordenar e em qualquer linha para abrir o detalhe do modelo.</p>
     <div class="tablebar">
@@ -544,6 +562,7 @@
   </section>
 
   <section class="sec">
+    <span class="kicker">bibliografia</span>
     <h2>Referências</h2>
     <p class="sec-sub">Base clássica de redes neurais aplicadas à previsão hidrológica que fundamenta as escolhas da varredura.</p>
     <ul class="refs">
@@ -685,7 +704,7 @@
 
   /* ---------------- header / KPIs / champions (static) ---------------- */
   document.getElementById('stamp').textContent =
-    'Pesquisa em desenvolvimento · Fonte: RELATORIO_TECNICO_PLANILHAO (varredura 2h–12h), atualizado em 03/07/2026 às 08:15 · 239 modelos concluídos e auditáveis';
+    'Pesquisa em desenvolvimento · Fonte: RELATORIO_TECNICO_PLANILHAO (varredura 2h–12h), atualizado em 03/07/2026 às 08:15 · 235 modelos no painel (os 4 de 4h seguem na base auditável)';
   document.getElementById('src').textContent =
     'Dados: RELATORIO_TECNICO_PLANILHAO_NOVA_PLANILHA_2H_8H_2026_06_30, aba TODOS_MODELOS (somente linhas completas: planilha auditável + .mat + status/CSV MATLAB). Valores por modelo estão íntegros na tabela acima; os gráficos são leituras agregadas do mesmo recorte.';
 
