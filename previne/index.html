@@ -343,7 +343,7 @@
     <p class="eyebrow">Previne · Bacia Taquari-Antas</p>
     <h1>Redes neurais de previsão de nível</h1>
     <p class="sub">Varredura completa dos modelos RNA treinados para prever o nível do rio na bacia
-      Taquari-Antas com antecedência de 2h, 4h, 8h e 12h — somente rodadas com planilha auditável,
+      Taquari-Antas com antecedência de 2h, 8h e 12h — somente rodadas com planilha auditável,
       arquivo <span style="font-variant-numeric:tabular-nums">.mat</span> e métricas rastreáveis.</p>
     <p class="stamp" id="stamp"></p>
   </header>
@@ -358,7 +358,7 @@
         <div class="s-num">Passo 1 · O problema</div>
         <div class="s-title">Antecipar o nível do rio</div>
         <div class="s-text">Na bacia <strong>Taquari-Antas</strong> as cheias sobem rápido. Queremos prever o nível
-          do rio em <strong>Santa Tereza</strong> com <strong>2h, 4h, 8h e 12h de antecedência</strong>, usando só o que os
+          do rio em <strong>Santa Tereza</strong> com <strong>2h, 8h e 12h de antecedência</strong>, usando só o que os
           sensores já mediram: níveis de estações da bacia e chuva acumulada.</div>
       </div>
       <div class="step">
@@ -434,7 +434,6 @@
         <span class="flabel">Horizonte</span>
         <button class="chip" data-v="all" aria-pressed="true">Todos</button>
         <button class="chip" data-v="2h">2h</button>
-        <button class="chip" data-v="4h">4h</button>
         <button class="chip" data-v="8h">8h</button>
         <button class="chip" data-v="12h">12h</button>
       </div>
@@ -552,11 +551,11 @@
 (function(){
   "use strict";
   const PAYLOAD = JSON.parse(document.getElementById('data').textContent);
-  const MODELS = PAYLOAD.models;
+  const MODELS = PAYLOAD.models.filter(m=>m.horizonte!=='4h');
 
-  const HORIZONS = ['2h','4h','8h','12h'];
+  const HORIZONS = ['2h','8h','12h'];
   const HCOLOR = {'2h':'var(--s-2h)','4h':'var(--s-4h)','8h':'var(--s-8h)','12h':'var(--s-12h)'};
-  const FAMS = ['2H_ALT','2H_CONV','4H_ALT','8H_ALT','8H_CONV','12H_ALT','12H_CONV'];
+  const FAMS = ['2H_ALT','2H_CONV','8H_ALT','8H_CONV','12H_ALT','12H_CONV'];
   const FAMLABEL = f => f.replace('_',' ').replace('H','h');
   const FAMFULL = f => {
     const [h,t]=f.split('_');
@@ -641,8 +640,8 @@
     const bestG = MODELS.reduce((a,b)=> b.PERS_geral>a.PERS_geral?b:a);
     const best2h = MODELS.filter(m=>m.horizonte==='2h').reduce((a,b)=> b.score_equilibrio>a.score_equilibrio?b:a);
     const data=[
-      {label:'Modelos avaliados', value:nf.format(MODELS.length), note:'7 famílias · 4 horizontes'},
-      {label:'Rodadas de varredura', value:'10', note:'todas auditáveis e concluídas'},
+      {label:'Modelos avaliados', value:nf.format(MODELS.length), note:'6 famílias · 3 horizontes'},
+      {label:'Rodadas de varredura', value:'8', note:'todas auditáveis e concluídas'},
       {label:'Melhor PERS geral', value:fmt(bestG.PERS_geral), note:FAMLABEL(bestG.familia)},
       {label:'Melhor equilíbrio', value:fmt(bestEq.score_equilibrio), note:FAMLABEL(bestEq.familia)+' · '+bestEq.neuronios+' neurônios'},
       {label:'Melhor MAE no teste (2h)', value:fmt1(best2h.MAE_teste_cm)+' cm', note:'E95 de '+fmt1(best2h.E95_teste_cm)+' cm'}
@@ -714,7 +713,7 @@
   (function renderFinds(){
     const items=[
       {stat:'6,9 → 45,6 cm', title:'O erro cresce com a antecedência',
-       text:'O MAE mediano no teste vai de 6,9 cm no 2h para 20,1 (4h), 33,3 (8h) e 45,6 cm no 12h. Cada horizonte precisa da sua própria tolerância operacional.'},
+       text:'O MAE mediano no teste vai de 6,9 cm no 2h para 33,3 no 8h e 45,6 cm no 12h. Cada horizonte precisa da sua própria tolerância operacional.'},
       {stat:'0,848 → −0,392', title:'Recorde não é garantia',
        text:'O maior PERS geral da varredura (8h CONV) despenca para persistência negativa no teste. É por isso que o score de equilíbrio — o pior recorte de cada modelo — guia as escolhas.'},
       {stat:'9 de 9', title:'Rotação de eventos virou o jogo no 2h',
@@ -733,12 +732,12 @@
        text:'Dos dez modelos de 8h com PERS geral acima de 0,8, nove caem para menos de 0,5 no teste. A métrica geral ainda mistura linhas de treino — sozinha, ela superestima o modelo.'},
       {stat:'0,41', title:'Resultado sensível ao recorte de eventos',
        text:'O spread mediano de persistência entre recortes chega a 0,41 no 8h e 0,38 no 12h: trocar os eventos de validação/teste muda muito a nota. Foi isso que motivou a rotação de eventos.'},
-      {stat:'4 modelos', title:'O 4h segue quase inexplorado',
-       text:'Só quatro modelos de 4h entraram na varredura. Qualquer conclusão para essa antecedência é provisória até uma rodada dedicada.'}
+      {stat:'4 modelos', title:'O 4h ficou fora desta leitura',
+       text:'A varredura treinou só quatro modelos de 4h — pouco para qualquer comparação honesta. Eles seguem na base auditável, mas fora dos quadros deste painel até uma rodada dedicada.'}
     ];
     const limits=[
       'O planilhão traz métricas agregadas por modelo; as dispersões observado × previsto e as subidas de eventos, ponto a ponto, dependem das planilhas auditáveis de cada rodada e serão anexadas ao painel.',
-      'Os horizontes têm quantidades de modelos muito diferentes (139 no 8h contra 4 no 4h), então a comparação entre horizontes é indicativa, não um teste controlado.',
+      'Os horizontes têm quantidades de modelos muito diferentes (139 no 8h, 49 no 2h, 47 no 12h), então a comparação entre horizontes é indicativa, não um teste controlado.',
       'Rodadas antigas pré-correção permanecem na base por rastreabilidade e entram em todos os cortes desta página.',
       'Os eventos de cheia disponíveis são poucos; persistência calculada sobre poucos eventos de teste tem incerteza alta, especialmente no 12h.'
     ];
