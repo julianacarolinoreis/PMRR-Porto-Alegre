@@ -364,6 +364,14 @@
   .notes dd{margin:0}
   @media (max-width:640px){ .notes dl{grid-template-columns:1fr} .notes dd{margin-bottom:6px} }
   .src{color:var(--muted);font-size:12px;margin-top:16px}
+  .footer{
+    background:var(--hero);color:var(--hero-muted);border-radius:14px;
+    padding:26px 30px;margin-top:40px;box-shadow:var(--shadow);
+    display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    font-size:13px;line-height:1.6;
+  }
+  .footer h4{margin:0 0 4px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--hero-eyebrow)}
+  .footer strong{color:var(--hero-ink);font-weight:600}
 
   @media (prefers-reduced-motion: no-preference){
     .kpi,.champ,figure.card{transition:border-color .15s ease}
@@ -559,9 +567,24 @@
       <dt>D-n / A-n</dt><dd>Variantes defasadas/derivadas do nível da estação (ex.: D-1h, A-12h), conforme a montagem de inputs de cada rodada.</dd>
     </dl>
     <p class="src" id="src"></p>
-    <p class="src">Equipe: Juliana Carolino Reis · Guilherme Garcia de Oliveira · Fernanda Vier · Josiane Leci Vanin Barbieri.
-      Pesquisa financiada pela FAPERGS (processo nº 24/2551-0002124-8).</p>
   </section>
+
+  <footer class="footer">
+    <div>
+      <h4>Previne · Bacia Taquari-Antas</h4>
+      Previsão de níveis do rio Taquari em <strong>Santa Tereza, RS</strong> por redes neurais artificiais,
+      nos horizontes de 2h, 8h e 12h.
+    </div>
+    <div>
+      <h4>Equipe</h4>
+      <strong>Juliana Carolino Reis</strong> · Guilherme Garcia de Oliveira · Fernanda Vier · Josiane Leci Vanin Barbieri
+    </div>
+    <div>
+      <h4>Financiamento</h4>
+      FAPERGS — processo nº <strong>24/2551-0002124-8</strong>. Pesquisa em desenvolvimento;
+      resultados para discussão técnica.
+    </div>
+  </footer>
 </div>
 
 <div class="modal" id="modal" hidden>
