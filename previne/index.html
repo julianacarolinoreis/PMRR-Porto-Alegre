@@ -5,7 +5,7 @@
     --ink:#101418; --ink-2:#4c5560; --muted:#8a939e;
     --grid:#e6eaee; --baseline:#c5cdd5; --border:rgba(16,20,24,.10);
     --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
-    --s-2h:#2a78d6; --s-4h:#1baf7a; --s-8h:#eda100; --s-12h:#008300;
+    --s-2h:#2532e4; --s-4h:#1f8d49; --s-8h:#c78d00; --s-12h:#d4271e;
     --good:#0ca30c; --warn:#fab219; --off:#898781;
     --good-bg:rgba(12,163,12,.12); --warn-bg:rgba(250,178,25,.16); --off-bg:rgba(137,135,129,.16);
     --bad:#c23a3a; --err-mae:#2a78d6; --err-e95:#4a3aa7;
@@ -17,7 +17,7 @@
       --ink:#f2f5f8; --ink-2:#b8c0c9; --muted:#848d97;
       --grid:#262c31; --baseline:#3a4249; --border:rgba(255,255,255,.10);
       --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
-      --s-2h:#3987e5; --s-4h:#199e70; --s-8h:#c98500; --s-12h:#008300;
+      --s-2h:#5a6bff; --s-4h:#32a65e; --s-8h:#c98500; --s-12h:#f0554d;
       --good:#0ca30c; --warn:#fab219; --off:#8f9791;
       --good-bg:rgba(12,163,12,.18); --warn-bg:rgba(250,178,25,.14); --off-bg:rgba(143,151,145,.16);
       --bad:#e66767; --err-mae:#3987e5; --err-e95:#9085e9;
@@ -29,7 +29,7 @@
     --ink:#101418; --ink-2:#4c5560; --muted:#8a939e;
     --grid:#e6eaee; --baseline:#c5cdd5; --border:rgba(16,20,24,.10);
     --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
-    --s-2h:#2a78d6; --s-4h:#1baf7a; --s-8h:#eda100; --s-12h:#008300;
+    --s-2h:#2532e4; --s-4h:#1f8d49; --s-8h:#c78d00; --s-12h:#d4271e;
     --good:#0ca30c; --warn:#fab219; --off:#898781;
     --good-bg:rgba(12,163,12,.12); --warn-bg:rgba(250,178,25,.16); --off-bg:rgba(137,135,129,.16);
     --bad:#c23a3a; --err-mae:#2a78d6; --err-e95:#4a3aa7;
@@ -40,7 +40,7 @@
     --ink:#f2f5f8; --ink-2:#b8c0c9; --muted:#848d97;
     --grid:#262c31; --baseline:#3a4249; --border:rgba(255,255,255,.10);
     --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
-    --s-2h:#3987e5; --s-4h:#199e70; --s-8h:#c98500; --s-12h:#008300;
+    --s-2h:#5a6bff; --s-4h:#32a65e; --s-8h:#c98500; --s-12h:#f0554d;
     --good:#0ca30c; --warn:#fab219; --off:#8f9791;
     --good-bg:rgba(12,163,12,.18); --warn-bg:rgba(250,178,25,.14); --off-bg:rgba(143,151,145,.16);
     --bad:#e66767; --err-mae:#3987e5; --err-e95:#9085e9;
@@ -155,6 +155,7 @@
   .zone-t{fill:var(--accent);font-size:11px;font-weight:600}
 
   /* ---------- achados ---------- */
+  .finds-h{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;font-weight:600}
   .finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
   .find{
     background:var(--surface);border:1px solid var(--border);border-radius:10px;
@@ -163,6 +164,12 @@
   .find .f-stat{font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--accent);font-variant-numeric:tabular-nums}
   .find .f-title{font-weight:650;font-size:14.5px;margin-top:2px}
   .find .f-text{font-size:13px;color:var(--ink-2);margin-top:6px;line-height:1.5}
+  .find.down{border-top-color:var(--off)}
+  .find.down .f-stat{color:var(--ink-2)}
+  .limits{margin:0;padding-left:20px;color:var(--ink-2);font-size:13.5px;line-height:1.7;max-width:90ch}
+  .refs{margin:0;padding:0;list-style:none;font-size:13px;color:var(--ink-2);line-height:1.55;display:grid;gap:8px;max-width:100ch}
+  .refs li{padding-left:14px;border-left:2px solid var(--grid)}
+  .refs .r-note{color:var(--muted);font-size:12px}
 
   /* ---------- leaderboard ---------- */
   .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
@@ -319,26 +326,32 @@
   <div class="kpis" id="kpis"></div>
 
   <section class="sec">
-    <h2>Os melhores modelos de cada horizonte</h2>
-    <p class="sec-sub">Escolha a métrica para ver o top 5 de cada antecedência — e <strong>clique em qualquer
-      modelo</strong> para abrir todas as métricas dele em detalhe. Todas as 239 rodadas concluídas
-      participam.</p>
+    <h2>Desempenho por horizonte</h2>
+    <p class="sec-sub">Os cinco modelos mais consistentes de cada antecedência, na métrica escolhida —
+      uma leitura comparativa, não um pódio: <strong>clique em qualquer modelo</strong> para examinar
+      todas as métricas dele. Todas as 239 rodadas concluídas participam.</p>
     <div class="tabs" id="lb-tabs" role="tablist"></div>
     <div class="lb-groups" id="lb"></div>
     <p class="lb-note">A barra mostra o valor da métrica selecionada em relação ao melhor do horizonte.</p>
   </section>
 
   <section class="sec">
-    <h2>Melhores modelos por horizonte</h2>
+    <h2>Modelo de referência de cada horizonte</h2>
     <p class="sec-sub">Campeão de cada horizonte pelo <strong>score de equilíbrio</strong> — o menor valor de
       persistência entre geral, validação e teste, para evitar escolher modelo que só vai bem em um recorte.</p>
     <div class="champs" id="champs"></div>
   </section>
 
   <section class="sec">
-    <h2>Achados depois de 10 rodadas de varredura</h2>
-    <p class="sec-sub">O que os 239 modelos ensinaram até aqui — cada achado sai direto dos números do planilhão.</p>
+    <h2>Principais achados</h2>
+    <p class="sec-sub">O que 239 modelos em 10 rodadas ensinaram — e o que ainda não sabemos. Cada achado sai
+      direto dos números do planilhão; resultado negativo também é resultado.</p>
+    <h3 class="finds-h">O que aprendemos</h3>
     <div class="finds" id="finds"></div>
+    <h3 class="finds-h">O que não funcionou — e também é achado</h3>
+    <div class="finds" id="finds-neg"></div>
+    <h3 class="finds-h">Limitações desta leitura</h3>
+    <ul class="limits" id="limits"></ul>
   </section>
 
   <section class="sec">
@@ -423,6 +436,20 @@
         <tbody id="tbody"></tbody>
       </table>
     </div>
+  </section>
+
+  <section class="sec">
+    <h2>Referências</h2>
+    <p class="sec-sub">Base clássica de redes neurais aplicadas à previsão hidrológica que fundamenta as escolhas da varredura.</p>
+    <ul class="refs">
+      <li>NASH, J. E.; SUTCLIFFE, J. V. River flow forecasting through conceptual models — Part I: A discussion of principles. <em>Journal of Hydrology</em>, v. 10, n. 3, p. 282–290, 1970. <span class="r-note">origem do coeficiente NASH usado na varredura</span></li>
+      <li>KITANIDIS, P. K.; BRAS, R. L. Real-time forecasting with a conceptual hydrologic model — 2: Applications and results. <em>Water Resources Research</em>, v. 16, n. 6, p. 1034–1044, 1980. <span class="r-note">índice de persistência, base do PERS</span></li>
+      <li>RUMELHART, D. E.; HINTON, G. E.; WILLIAMS, R. J. Learning representations by back-propagating errors. <em>Nature</em>, v. 323, p. 533–536, 1986. <span class="r-note">retropropagação, o algoritmo de treino das RNA</span></li>
+      <li>HORNIK, K.; STINCHCOMBE, M.; WHITE, H. Multilayer feedforward networks are universal approximators. <em>Neural Networks</em>, v. 2, n. 5, p. 359–366, 1989. <span class="r-note">por que uma camada oculta basta em princípio</span></li>
+      <li>ASCE TASK COMMITTEE ON APPLICATION OF ARTIFICIAL NEURAL NETWORKS IN HYDROLOGY. Artificial neural networks in hydrology I: Preliminary concepts; II: Hydrologic applications. <em>Journal of Hydrologic Engineering</em>, v. 5, n. 2, p. 115–137, 2000.</li>
+      <li>MAIER, H. R.; DANDY, G. C. Neural networks for the prediction and forecasting of water resources variables: a review of modelling issues and applications. <em>Environmental Modelling &amp; Software</em>, v. 15, n. 1, p. 101–124, 2000. <span class="r-note">guia para escolha de inputs e arquitetura</span></li>
+      <li>DAWSON, C. W.; WILBY, R. L. Hydrological modelling using artificial neural networks. <em>Progress in Physical Geography</em>, v. 25, n. 1, p. 80–108, 2001. <span class="r-note">protocolo de avaliação com múltiplas métricas, como o desta varredura</span></li>
+    </ul>
   </section>
 
   <section class="notes">
@@ -530,7 +557,7 @@
 
   /* ---------------- header / KPIs / champions (static) ---------------- */
   document.getElementById('stamp').textContent =
-    'Fonte: RELATORIO_TECNICO_PLANILHAO (varredura 2h–12h) · atualizado em 03/07/2026 às 08:15 · 239 modelos concluídos e auditáveis';
+    'Pesquisa em desenvolvimento · Fonte: RELATORIO_TECNICO_PLANILHAO (varredura 2h–12h), atualizado em 03/07/2026 às 08:15 · 239 modelos concluídos e auditáveis';
   document.getElementById('src').textContent =
     'Dados: RELATORIO_TECNICO_PLANILHAO_NOVA_PLANILHA_2H_8H_2026_06_30, aba TODOS_MODELOS (somente linhas completas: planilha auditável + .mat + status/CSV MATLAB). Valores por modelo estão íntegros na tabela acima; os gráficos são leituras agregadas do mesmo recorte.';
 
@@ -599,14 +626,34 @@
       {stat:'2×', title:'Tamanho de rede tem regra estável',
        text:'A mediana da varredura é de 2 neurônios por input (ex.: 22 neurônios para 11 inputs). Redes maiores não dominaram o topo — inputs certos valem mais que neurônios extras.'}
     ];
+    const negItems=[
+      {stat:'71 de 239', title:'Um terço piora sobre a previsão ingênua',
+       text:'30% dos modelos têm persistência negativa na validação ou no teste, concentrados no 8h (48) e no 12h (14). Mapear onde a rede falha orienta a montagem da próxima rodada.'},
+      {stat:'9 de 10', title:'Recordes que não generalizam',
+       text:'Dos dez modelos de 8h com PERS geral acima de 0,8, nove caem para menos de 0,5 no teste. A métrica geral ainda mistura linhas de treino — sozinha, ela superestima o modelo.'},
+      {stat:'0,41', title:'Resultado sensível ao recorte de eventos',
+       text:'O spread mediano de persistência entre recortes chega a 0,41 no 8h e 0,38 no 12h: trocar os eventos de validação/teste muda muito a nota. Foi isso que motivou a rotação de eventos.'},
+      {stat:'4 modelos', title:'O 4h segue quase inexplorado',
+       text:'Só quatro modelos de 4h entraram na varredura. Qualquer conclusão para essa antecedência é provisória até uma rodada dedicada.'}
+    ];
+    const limits=[
+      'O planilhão traz métricas agregadas por modelo; as dispersões observado × previsto e as subidas de eventos, ponto a ponto, dependem das planilhas auditáveis de cada rodada e serão anexadas ao painel.',
+      'Os horizontes têm quantidades de modelos muito diferentes (139 no 8h contra 4 no 4h), então a comparação entre horizontes é indicativa, não um teste controlado.',
+      'Rodadas antigas pré-correção permanecem na base por rastreabilidade e entram em todos os cortes desta página.',
+      'Os eventos de cheia disponíveis são poucos; persistência calculada sobre poucos eventos de teste tem incerteza alta, especialmente no 12h.'
+    ];
     const root=document.getElementById('finds');
-    items.forEach(it=>{
-      const c=document.createElement('div'); c.className='find';
+    const build=(rootEl,arr,neg)=>arr.forEach(it=>{
+      const c=document.createElement('div'); c.className='find'+(neg?' down':'');
       const s=document.createElement('div'); s.className='f-stat'; s.textContent=it.stat;
       const t=document.createElement('div'); t.className='f-title'; t.textContent=it.title;
       const x=document.createElement('div'); x.className='f-text'; x.textContent=it.text;
-      c.append(s,t,x); root.appendChild(c);
+      c.append(s,t,x); rootEl.appendChild(c);
     });
+    build(root, items, false);
+    build(document.getElementById('finds-neg'), negItems, true);
+    const lu=document.getElementById('limits');
+    limits.forEach(l=>{ const li=document.createElement('li'); li.textContent=l; lu.appendChild(li); });
   })();
 
   /* ---------------- leaderboard (os melhores) ---------------- */
@@ -697,7 +744,7 @@
       if(v==null) { txt(el('text',{x:x(0)+6,y:yC+4,class:'axis-t'},svg),'—'); return; }
       const neg=v<0, x0=x(0), x1=x(v);
       const bar=el('rect',{x:Math.min(x0,x1),y:yC-9,width:Math.max(Math.abs(x1-x0),1.5),height:18,
-        fill:neg?'var(--bad)':HCOLOR[m.horizonte],rx:4,class:neg?'anim-xr':'anim-x'},svg);
+        fill:neg?'var(--off)':HCOLOR[m.horizonte],rx:4,class:neg?'anim-xr':'anim-x'},svg);
       bar.style.animationDelay=(i*0.06)+'s';
       const clampNote=(v<lo)?' (fora da escala)':'';
       const tx=neg?Math.min(x0,x1)-5:Math.max(x0,x1)+5;
