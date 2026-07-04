@@ -172,22 +172,27 @@
   }
   .tab:hover{background:var(--surface-2)}
   .tab[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-  .lb{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:10px;list-style:none;margin:0;padding:0}
+  .lb-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .lb-group{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
+  .lb-group .g-head{display:flex;align-items:center;gap:8px;font-weight:650;font-size:15px;margin-bottom:10px}
+  .lb-group .g-head .dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .lb-group .g-head .g-n{margin-left:auto;font-size:12px;font-weight:500;color:var(--muted)}
+  .lb{display:flex;flex-direction:column;gap:6px;list-style:none;margin:0;padding:0}
   .lb-item{
-    display:grid;grid-template-columns:34px 1fr auto;gap:4px 12px;align-items:center;
-    background:var(--surface);border:1px solid var(--border);border-radius:10px;
-    padding:11px 14px;box-shadow:var(--shadow);cursor:pointer;text-align:left;font:inherit;color:inherit;
+    display:grid;grid-template-columns:26px 1fr auto;gap:3px 10px;align-items:center;
+    background:transparent;border:1px solid transparent;border-radius:8px;
+    padding:7px 8px;cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%;
   }
-  .lb-item:hover{border-color:var(--accent)}
-  .lb-rank{font-size:19px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;grid-row:span 2;align-self:center}
-  .lb-item:nth-child(1) .lb-rank,.lb-item:nth-child(2) .lb-rank,.lb-item:nth-child(3) .lb-rank{color:var(--accent)}
+  .lb-item:hover{border-color:var(--accent);background:var(--accent-soft)}
+  .lb-rank{font-size:16px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;grid-row:span 2;align-self:center}
+  .lb-item:first-child .lb-rank{color:var(--accent)}
   .lb-name{
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;
     color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;
   }
   .lb-meta{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--muted)}
   .lb-track{grid-column:2;height:8px;border-radius:4px;background:var(--surface-2);overflow:hidden}
-  .lb-fill{height:100%;border-radius:4px}
+  .lb-fill{display:block;height:100%;border-radius:4px}
   .lb-val{font-size:15px;font-weight:650;font-variant-numeric:tabular-nums;grid-row:span 2;align-self:center}
   @media (prefers-reduced-motion: no-preference){
     .lb-fill{animation:growW .55s cubic-bezier(.2,.7,.3,1) both}
@@ -314,13 +319,13 @@
   <div class="kpis" id="kpis"></div>
 
   <section class="sec">
-    <h2>Os melhores modelos</h2>
-    <p class="sec-sub">Escolha a métrica para ver o top 9 da varredura — e <strong>clique em qualquer
+    <h2>Os melhores modelos de cada horizonte</h2>
+    <p class="sec-sub">Escolha a métrica para ver o top 5 de cada antecedência — e <strong>clique em qualquer
       modelo</strong> para abrir todas as métricas dele em detalhe. Todas as 239 rodadas concluídas
       participam.</p>
     <div class="tabs" id="lb-tabs" role="tablist"></div>
-    <ol class="lb" id="lb"></ol>
-    <p class="lb-note">A barra mostra o valor da métrica selecionada em relação ao melhor do grupo · cor = horizonte de previsão.</p>
+    <div class="lb-groups" id="lb"></div>
+    <p class="lb-note">A barra mostra o valor da métrica selecionada em relação ao melhor do horizonte.</p>
   </section>
 
   <section class="sec">
@@ -628,27 +633,36 @@
   })();
   function renderLb(){
     const mt=METRICS.find(m=>m.k===lbMetric);
-    const pool=MODELS.filter(m=>m[lbMetric]!=null);
-    const top=[...pool].sort((a,b)=>b[lbMetric]-a[lbMetric]).slice(0,9);
-    const max=Math.max(top.length?top[0][lbMetric]:1, 0.0001);
     const root=document.getElementById('lb'); root.replaceChildren();
-    top.forEach((m,i)=>{
-      const li=document.createElement('li'); li.style.display='contents';
-      const btn=document.createElement('button'); btn.className='lb-item';
-      const rk=document.createElement('span'); rk.className='lb-rank'; rk.textContent=String(i+1);
-      const nm=document.createElement('span'); nm.className='lb-name'; nm.textContent=m.modelo; nm.title=m.modelo;
-      const val=document.createElement('span'); val.className='lb-val'; val.textContent=fmt(m[lbMetric]);
-      const track=document.createElement('span'); track.className='lb-track';
-      const fill=document.createElement('span'); fill.className='lb-fill';
-      fill.style.width=Math.max(0, m[lbMetric]/max*100)+'%';
-      fill.style.background=HCOLOR[m.horizonte];
-      track.appendChild(fill);
-      const meta=document.createElement('span'); meta.className='lb-meta'; meta.style.gridColumn='2';
-      const d=document.createElement('span'); d.className='hdot'; d.style.background=HCOLOR[m.horizonte]; d.style.marginRight='0';
-      meta.append(d, document.createTextNode(FAMLABEL(m.familia)+' · '+mt.title));
-      btn.append(rk,nm,val,track,meta);
-      btn.addEventListener('click',()=>openModal(m));
-      li.appendChild(btn); root.appendChild(li);
+    HORIZONS.forEach(h=>{
+      const pool=MODELS.filter(m=>m.horizonte===h && m[lbMetric]!=null);
+      if(!pool.length) return;
+      const top=[...pool].sort((a,b)=>b[lbMetric]-a[lbMetric]).slice(0,5);
+      const max=Math.max(top[0][lbMetric], 0.0001);
+      const group=document.createElement('div'); group.className='lb-group';
+      const gh=document.createElement('div'); gh.className='g-head';
+      const dot=document.createElement('span'); dot.className='dot'; dot.style.background=HCOLOR[h];
+      const gn=document.createElement('span'); gn.className='g-n'; gn.textContent=pool.length+' modelos';
+      gh.append(dot, document.createTextNode(h+' de antecedência'), gn);
+      const list=document.createElement('ol'); list.className='lb';
+      top.forEach((m,i)=>{
+        const li=document.createElement('li'); li.style.display='contents';
+        const btn=document.createElement('button'); btn.className='lb-item';
+        const rk=document.createElement('span'); rk.className='lb-rank'; rk.textContent=String(i+1);
+        const nm=document.createElement('span'); nm.className='lb-name'; nm.textContent=m.modelo; nm.title=m.modelo;
+        const val=document.createElement('span'); val.className='lb-val'; val.textContent=fmt(m[lbMetric]);
+        const track=document.createElement('span'); track.className='lb-track';
+        const fill=document.createElement('span'); fill.className='lb-fill';
+        fill.style.width=Math.max(0, m[lbMetric]/max*100)+'%';
+        fill.style.background=HCOLOR[m.horizonte];
+        track.appendChild(fill);
+        const meta=document.createElement('span'); meta.className='lb-meta'; meta.style.gridColumn='2';
+        meta.append(document.createTextNode(FAMLABEL(m.familia)+' · '+mt.title+' · MAE teste '+fmt1(m.MAE_teste_cm)+' cm'));
+        btn.append(rk,nm,val,track,meta);
+        btn.addEventListener('click',()=>openModal(m));
+        li.appendChild(btn); list.appendChild(li);
+      });
+      group.append(gh,list); root.appendChild(group);
     });
   }
   renderLb();
