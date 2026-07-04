@@ -1,10 +1,12 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head><body><title>PREVINE Taquari-Antas — Redes Neurais</title>
 <style>
   :root{
-    --page:#f3f6f9; --surface:#fbfcfd; --surface-2:#f0f3f6;
-    --ink:#101418; --ink-2:#4c5560; --muted:#8a939e;
-    --grid:#e6eaee; --baseline:#c5cdd5; --border:rgba(16,20,24,.10);
+    --page:#edf0e4; --surface:#fdfdf9; --surface-2:#f2f4ea;
+    --ink:#151812; --ink-2:#4e564a; --muted:#89907f;
+    --grid:#e5e8db; --baseline:#c6cbb8; --border:rgba(21,24,18,.10);
     --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
+    --chrome:#1e5b3c; --chrome-soft:rgba(30,91,60,.10);
+    --hero:#17422e; --hero-ink:#f2f7ee; --hero-muted:#a9c9ae; --hero-eyebrow:#8fd6a4;
     --s-2h:#2532e4; --s-4h:#1f8d49; --s-8h:#c78d00; --s-12h:#d4271e;
     --good:#0ca30c; --warn:#fab219; --off:#898781;
     --good-bg:rgba(12,163,12,.12); --warn-bg:rgba(250,178,25,.16); --off-bg:rgba(137,135,129,.16);
@@ -13,10 +15,12 @@
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --page:#0d1013; --surface:#15191c; --surface-2:#1b2024;
-      --ink:#f2f5f8; --ink-2:#b8c0c9; --muted:#848d97;
-      --grid:#262c31; --baseline:#3a4249; --border:rgba(255,255,255,.10);
+      --page:#0c110d; --surface:#151b16; --surface-2:#1b231c;
+      --ink:#eff4ec; --ink-2:#b7c1b4; --muted:#828c80;
+      --grid:#252d26; --baseline:#39443a; --border:rgba(255,255,255,.10);
       --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
+      --chrome:#63c88b; --chrome-soft:rgba(99,200,139,.14);
+      --hero:#123425; --hero-ink:#eff6ee; --hero-muted:#93b799; --hero-eyebrow:#7ecf96;
       --s-2h:#5a6bff; --s-4h:#32a65e; --s-8h:#c98500; --s-12h:#f0554d;
       --good:#0ca30c; --warn:#fab219; --off:#8f9791;
       --good-bg:rgba(12,163,12,.18); --warn-bg:rgba(250,178,25,.14); --off-bg:rgba(143,151,145,.16);
@@ -25,10 +29,12 @@
     }
   }
   :root[data-theme="light"]{
-    --page:#f3f6f9; --surface:#fbfcfd; --surface-2:#f0f3f6;
-    --ink:#101418; --ink-2:#4c5560; --muted:#8a939e;
-    --grid:#e6eaee; --baseline:#c5cdd5; --border:rgba(16,20,24,.10);
+    --page:#edf0e4; --surface:#fdfdf9; --surface-2:#f2f4ea;
+    --ink:#151812; --ink-2:#4e564a; --muted:#89907f;
+    --grid:#e5e8db; --baseline:#c6cbb8; --border:rgba(21,24,18,.10);
     --accent:#2a78d6; --accent-soft:rgba(42,120,214,.10);
+    --chrome:#1e5b3c; --chrome-soft:rgba(30,91,60,.10);
+    --hero:#17422e; --hero-ink:#f2f7ee; --hero-muted:#a9c9ae; --hero-eyebrow:#8fd6a4;
     --s-2h:#2532e4; --s-4h:#1f8d49; --s-8h:#c78d00; --s-12h:#d4271e;
     --good:#0ca30c; --warn:#fab219; --off:#898781;
     --good-bg:rgba(12,163,12,.12); --warn-bg:rgba(250,178,25,.16); --off-bg:rgba(137,135,129,.16);
@@ -36,10 +42,12 @@
     --shadow:0 1px 2px rgba(16,20,24,.05),0 4px 14px rgba(16,20,24,.05);
   }
   :root[data-theme="dark"]{
-    --page:#0d1013; --surface:#15191c; --surface-2:#1b2024;
-    --ink:#f2f5f8; --ink-2:#b8c0c9; --muted:#848d97;
-    --grid:#262c31; --baseline:#3a4249; --border:rgba(255,255,255,.10);
+    --page:#0c110d; --surface:#151b16; --surface-2:#1b231c;
+    --ink:#eff4ec; --ink-2:#b7c1b4; --muted:#828c80;
+    --grid:#252d26; --baseline:#39443a; --border:rgba(255,255,255,.10);
     --accent:#3987e5; --accent-soft:rgba(57,135,229,.14);
+    --chrome:#63c88b; --chrome-soft:rgba(99,200,139,.14);
+    --hero:#123425; --hero-ink:#eff6ee; --hero-muted:#93b799; --hero-eyebrow:#7ecf96;
     --s-2h:#5a6bff; --s-4h:#32a65e; --s-8h:#c98500; --s-12h:#f0554d;
     --good:#0ca30c; --warn:#fab219; --off:#8f9791;
     --good-bg:rgba(12,163,12,.18); --warn-bg:rgba(250,178,25,.14); --off-bg:rgba(143,151,145,.16);
@@ -55,16 +63,21 @@
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:1240px;margin:0 auto;padding:32px 24px 80px}
-  a{color:var(--accent)}
+  a{color:var(--chrome)}
 
-  /* ---------- header ---------- */
+  /* ---------- header (hero MapBiomas) ---------- */
+  .hero{
+    background:var(--hero);color:var(--hero-ink);border-radius:14px;
+    padding:30px 30px 26px;box-shadow:var(--shadow);
+  }
   .eyebrow{
     font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--accent);margin:0 0 6px;
+    color:var(--hero-eyebrow);margin:0 0 6px;
   }
   h1{font-size:clamp(24px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;margin:0 0 6px;text-wrap:balance}
-  .sub{color:var(--ink-2);margin:0;max-width:70ch}
-  .stamp{color:var(--muted);font-size:13px;margin-top:10px}
+  .sub{color:var(--hero-muted);margin:0;max-width:70ch}
+  .sub strong{color:var(--hero-ink)}
+  .stamp{color:var(--hero-muted);opacity:.85;font-size:13px;margin-top:12px}
 
   /* ---------- KPI row ---------- */
   .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:26px 0 8px}
@@ -122,8 +135,8 @@
     font:inherit;font-size:13px;font-weight:550;border-radius:999px;padding:4px 12px;cursor:pointer;
   }
   .chip:hover{background:var(--surface-2)}
-  .chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:650}
-  .chip:focus-visible,button:focus-visible,input:focus-visible,th.sortable:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .chip[aria-pressed="true"]{background:var(--chrome-soft);border-color:var(--chrome);color:var(--chrome);font-weight:650}
+  .chip:focus-visible,button:focus-visible,input:focus-visible,th.sortable:focus-visible{outline:2px solid var(--chrome);outline-offset:2px}
   .fcount{margin-left:auto;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 
   /* ---------- chart cards ---------- */
@@ -154,14 +167,26 @@
   .zone{fill:var(--accent);opacity:.07}
   .zone-t{fill:var(--accent);font-size:11px;font-weight:600}
 
+  /* ---------- entenda a pesquisa ---------- */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+  .step{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;box-shadow:var(--shadow)}
+  .step .s-num{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--chrome)}
+  .step .s-title{font-weight:650;font-size:15px;margin:4px 0 6px}
+  .step .s-text{font-size:13px;color:var(--ink-2);line-height:1.55}
+  .step .s-text strong{color:var(--ink)}
+  .step.soon{border-style:dashed;background:transparent}
+  .net-diagram{margin:10px 0 2px}
+  .net-diagram svg{display:block;width:100%;height:auto;max-width:340px}
+  .m-soon{border:1.5px dashed var(--baseline);border-radius:8px;padding:10px 14px;color:var(--muted);font-size:12.5px;margin-top:18px;line-height:1.5}
+
   /* ---------- achados ---------- */
   .finds-h{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px;font-weight:600}
   .finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
   .find{
     background:var(--surface);border:1px solid var(--border);border-radius:10px;
-    padding:16px;box-shadow:var(--shadow);border-top:3px solid var(--accent);
+    padding:16px;box-shadow:var(--shadow);border-top:3px solid var(--chrome);
   }
-  .find .f-stat{font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--accent);font-variant-numeric:tabular-nums}
+  .find .f-stat{font-size:26px;font-weight:700;letter-spacing:-.01em;color:var(--chrome);font-variant-numeric:tabular-nums}
   .find .f-title{font-weight:650;font-size:14.5px;margin-top:2px}
   .find .f-text{font-size:13px;color:var(--ink-2);margin-top:6px;line-height:1.5}
   .find.down{border-top-color:var(--off)}
@@ -178,7 +203,7 @@
     font:inherit;font-size:13.5px;font-weight:600;border-radius:8px;padding:7px 14px;cursor:pointer;
   }
   .tab:hover{background:var(--surface-2)}
-  .tab[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .tab[aria-pressed="true"]{background:var(--chrome);border-color:var(--chrome);color:#fff}
   .lb-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
   .lb-group{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;box-shadow:var(--shadow)}
   .lb-group .g-head{display:flex;align-items:center;gap:8px;font-weight:650;font-size:15px;margin-bottom:10px}
@@ -190,9 +215,9 @@
     background:transparent;border:1px solid transparent;border-radius:8px;
     padding:7px 8px;cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%;
   }
-  .lb-item:hover{border-color:var(--accent);background:var(--accent-soft)}
+  .lb-item:hover{border-color:var(--chrome);background:var(--chrome-soft)}
   .lb-rank{font-size:16px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;grid-row:span 2;align-self:center}
-  .lb-item:first-child .lb-rank{color:var(--accent)}
+  .lb-item:first-child .lb-rank{color:var(--chrome)}
   .lb-name{
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;
     color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;
@@ -314,7 +339,7 @@
 </style>
 
 <div class="wrap">
-  <header>
+  <header class="hero">
     <p class="eyebrow">Previne · Bacia Taquari-Antas</p>
     <h1>Redes neurais de previsão de nível</h1>
     <p class="sub">Varredura completa dos modelos RNA treinados para prever o nível do rio na bacia
@@ -326,18 +351,64 @@
   <div class="kpis" id="kpis"></div>
 
   <section class="sec">
-    <h2>Desempenho por horizonte</h2>
-    <p class="sec-sub">Os cinco modelos mais consistentes de cada antecedência, na métrica escolhida —
-      uma leitura comparativa, não um pódio: <strong>clique em qualquer modelo</strong> para examinar
-      todas as métricas dele. Todas as 239 rodadas concluídas participam.</p>
-    <div class="tabs" id="lb-tabs" role="tablist"></div>
-    <div class="lb-groups" id="lb"></div>
-    <p class="lb-note">A barra mostra o valor da métrica selecionada em relação ao melhor do horizonte.</p>
+    <h2>Entenda a pesquisa</h2>
+    <p class="sec-sub">O caminho completo, do problema ao resultado — para quem chega agora no projeto.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="s-num">Passo 1 · O problema</div>
+        <div class="s-title">Antecipar o nível do rio</div>
+        <div class="s-text">Na bacia <strong>Taquari-Antas</strong> as cheias sobem rápido. Queremos prever o nível
+          do rio em <strong>Santa Tereza</strong> com <strong>2h, 4h, 8h e 12h de antecedência</strong>, usando só o que os
+          sensores já mediram: níveis de estações da bacia e chuva acumulada.</div>
+      </div>
+      <div class="step">
+        <div class="s-num">Passo 2 · O método</div>
+        <div class="s-title">Como a rede neural aprende</div>
+        <div class="net-diagram" id="net-diagram" role="img" aria-label="Diagrama de rede neural: inputs, camada oculta e saída"></div>
+        <div class="s-text">Cada modelo recebe de <strong>3 a 15 inputs</strong>, combina tudo numa camada oculta de
+          <strong>10 a 30 neurônios</strong> e produz uma única saída: o nível daqui a N horas. O treino (retropropagação,
+          em MATLAB) ajusta os pesos por até <strong>100 mil ciclos</strong>, minimizando o custo J.</div>
+      </div>
+      <div class="step">
+        <div class="s-num">Passo 3 · As duas montagens</div>
+        <div class="s-title">Convencional × Alternativa</div>
+        <div class="s-text">Testamos duas formas de montar os inputs. A <strong>convencional (CONV)</strong> usa o conjunto
+          clássico de estações da bacia — nível atual e primeira defasagem de cada uma. A <strong>alternativa (ALT)</strong>
+          concentra a informação em Santa Tereza e na estação de montante, explorando várias defasagens do
+          próprio nível (D-2h, D-4h, A-12h…). Os pódios acima mostram as duas lado a lado.</div>
+      </div>
+      <div class="step">
+        <div class="s-num">Passo 4 · A avaliação</div>
+        <div class="s-title">Como medimos o acerto</div>
+        <div class="s-text">Os dados são divididos por <strong>eventos de cheia</strong> em treino, validação e teste — e a
+          <strong>rotação de eventos</strong> troca esses papéis entre rodadas para o resultado não depender da sorte da
+          divisão. A régua principal é a <strong>persistência (PERS)</strong>: quanto o modelo ganha da previsão ingênua
+          “daqui a N horas o nível será o de agora”. O erro em centímetros (MAE, E95) e o NASH completam a leitura.</div>
+      </div>
+      <div class="step soon">
+        <div class="s-num">Próximo passo</div>
+        <div class="s-title">Dispersões e subidas de eventos</div>
+        <div class="s-text">Ao clicar em um modelo, além das métricas, este painel vai mostrar a <strong>dispersão
+          observado × previsto</strong> (geral e teste) e as <strong>subidas dos eventos</strong> ponto a ponto — assim que as
+          planilhas auditáveis de cada rodada forem anexadas à base.</div>
+      </div>
+    </div>
   </section>
 
   <section class="sec">
-    <h2>Modelo de referência de cada horizonte</h2>
-    <p class="sec-sub">Campeão de cada horizonte pelo <strong>score de equilíbrio</strong> — o menor valor de
+    <h2>Desempenho por família</h2>
+    <p class="sec-sub">Os cinco modelos mais consistentes de cada família, na métrica escolhida. As montagens
+      <strong>alternativa e convencional aparecem separadas</strong> — são modelos diferentes, treinados em rodadas
+      próprias. Uma leitura comparativa, não um pódio: <strong>clique em qualquer modelo</strong> para examinar todas
+      as métricas dele.</p>
+    <div class="tabs" id="lb-tabs" role="tablist"></div>
+    <div class="lb-groups" id="lb"></div>
+    <p class="lb-note">A barra mostra o valor da métrica selecionada em relação ao melhor da família.</p>
+  </section>
+
+  <section class="sec">
+    <h2>Modelo de referência de cada família</h2>
+    <p class="sec-sub">O modelo mais equilibrado de cada família pelo <strong>score de equilíbrio</strong> — o menor valor de
       persistência entre geral, validação e teste, para evitar escolher modelo que só vai bem em um recorte.</p>
     <div class="champs" id="champs"></div>
   </section>
@@ -487,6 +558,10 @@
   const HCOLOR = {'2h':'var(--s-2h)','4h':'var(--s-4h)','8h':'var(--s-8h)','12h':'var(--s-12h)'};
   const FAMS = ['2H_ALT','2H_CONV','4H_ALT','8H_ALT','8H_CONV','12H_ALT','12H_CONV'];
   const FAMLABEL = f => f.replace('_',' ').replace('H','h');
+  const FAMFULL = f => {
+    const [h,t]=f.split('_');
+    return h.replace('H','h')+' — '+(t==='ALT'?'alternativa':'convencional');
+  };
 
   const nf = new Intl.NumberFormat('pt-BR');
   const fmt = (v,d=3)=> (v==null||Number.isNaN(v)) ? '—' :
@@ -584,14 +659,14 @@
 
   (function renderChamps(){
     const root=document.getElementById('champs');
-    HORIZONS.forEach(h=>{
-      const pool = MODELS.filter(m=>m.horizonte===h);
+    FAMS.forEach(f=>{
+      const pool = MODELS.filter(m=>m.familia===f);
       if(!pool.length) return;
       const b = pool.reduce((a,x)=> x.score_equilibrio>a.score_equilibrio?x:a);
       const c=document.createElement('div'); c.className='champ';
       const head=document.createElement('div'); head.className='horizon';
-      const dot=document.createElement('span'); dot.className='dot'; dot.style.background=HCOLOR[h];
-      head.append(dot, document.createTextNode(h+' de antecedência'));
+      const dot=document.createElement('span'); dot.className='dot'; dot.style.background=HCOLOR[b.horizonte];
+      head.append(dot, document.createTextNode(FAMFULL(f)));
       const name=document.createElement('div'); name.className='model'; name.textContent=b.modelo;
       const big=document.createElement('div'); big.className='big'; big.textContent=fmt(b.score_equilibrio);
       const bl=document.createElement('div'); bl.className='big-label'; bl.textContent='score de equilíbrio (pior recorte entre geral, validação e teste)';
@@ -608,6 +683,31 @@
       c.addEventListener('keydown',ev=>{ if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();openModal(b);} });
       root.appendChild(c);
     });
+  })();
+
+  /* ---------------- diagrama da rede ---------------- */
+  (function renderNet(){
+    const box=document.getElementById('net-diagram'); if(!box) return;
+    const W=340,H=170;
+    const svg=el('svg',{viewBox:`0 0 ${W} ${H}`});
+    const inX=26, hidX=170, outX=314;
+    const inputs=[['nível Santa Tereza',30],['nível D-1h',68],['nível montante',106],['chuva 36h',144]];
+    const hid=[22,53,84,115,146];
+    const outY=88;
+    hid.forEach(hy=>{
+      inputs.forEach(([,iy])=>el('line',{x1:inX+7,y1:iy,x2:hidX-8,y2:hy,stroke:'var(--grid)','stroke-width':1},svg));
+      el('line',{x1:hidX+8,y1:hy,x2:outX-9,y2:outY,stroke:'var(--grid)','stroke-width':1},svg);
+    });
+    inputs.forEach(([lab,iy])=>{
+      el('circle',{cx:inX,cy:iy,r:6,fill:'var(--s-2h)',stroke:'var(--surface)','stroke-width':2},svg);
+      txt(el('text',{x:inX+12,y:iy-8,class:'axis-t',style:'font-size:9.5px'},svg),lab);
+    });
+    hid.forEach(hy=>el('circle',{cx:hidX,cy:hy,r:7,fill:'var(--off)',stroke:'var(--surface)','stroke-width':2},svg));
+    el('circle',{cx:outX,cy:outY,r:8,fill:'var(--accent)',stroke:'var(--surface)','stroke-width':2},svg);
+    txt(el('text',{x:inX-6,y:H-6,class:'axis-t'},svg),'inputs');
+    txt(el('text',{x:hidX,y:H-6,'text-anchor':'middle',class:'axis-t'},svg),'camada oculta');
+    txt(el('text',{x:outX+4,y:H-6,'text-anchor':'end',class:'axis-t'},svg),'nível em N horas');
+    box.appendChild(svg);
   })();
 
   /* ---------------- achados ---------------- */
@@ -681,16 +781,17 @@
   function renderLb(){
     const mt=METRICS.find(m=>m.k===lbMetric);
     const root=document.getElementById('lb'); root.replaceChildren();
-    HORIZONS.forEach(h=>{
-      const pool=MODELS.filter(m=>m.horizonte===h && m[lbMetric]!=null);
+    FAMS.forEach(f=>{
+      const pool=MODELS.filter(m=>m.familia===f && m[lbMetric]!=null);
       if(!pool.length) return;
+      const h=pool[0].horizonte;
       const top=[...pool].sort((a,b)=>b[lbMetric]-a[lbMetric]).slice(0,5);
       const max=Math.max(top[0][lbMetric], 0.0001);
       const group=document.createElement('div'); group.className='lb-group';
       const gh=document.createElement('div'); gh.className='g-head';
       const dot=document.createElement('span'); dot.className='dot'; dot.style.background=HCOLOR[h];
       const gn=document.createElement('span'); gn.className='g-n'; gn.textContent=pool.length+' modelos';
-      gh.append(dot, document.createTextNode(h+' de antecedência'), gn);
+      gh.append(dot, document.createTextNode(FAMFULL(f)), gn);
       const list=document.createElement('ol'); list.className='lb';
       top.forEach((m,i)=>{
         const li=document.createElement('li'); li.style.display='contents';
@@ -704,7 +805,7 @@
         fill.style.background=HCOLOR[m.horizonte];
         track.appendChild(fill);
         const meta=document.createElement('span'); meta.className='lb-meta'; meta.style.gridColumn='2';
-        meta.append(document.createTextNode(FAMLABEL(m.familia)+' · '+mt.title+' · MAE teste '+fmt1(m.MAE_teste_cm)+' cm'));
+        meta.append(document.createTextNode(mt.title+' · MAE teste '+fmt1(m.MAE_teste_cm)+' cm'));
         btn.append(rk,nm,val,track,meta);
         btn.addEventListener('click',()=>openModal(m));
         li.appendChild(btn); list.appendChild(li);
@@ -839,6 +940,10 @@
       'nº '+rankOf('PERS_teste')+' em teste · nº '+rankOf('score_equilibrio')+' em equilíbrio'+
       (m.fim?' · treino concluído em '+m.fim.replace('T',' '):'');
     body.appendChild(rl);
+
+    const soon=document.createElement('div'); soon.className='m-soon';
+    soon.textContent='Em preparação para este modelo: dispersão observado × previsto (geral e teste) e subidas dos eventos, ponto a ponto — entram quando as planilhas auditáveis da rodada forem anexadas à base.';
+    body.appendChild(soon);
 
     const obs=document.createElement('div'); obs.className='m-obs';
     obs.textContent='Nota da varredura: '+PAYLOAD.obs[m.obs];
