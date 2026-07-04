@@ -415,11 +415,13 @@
       <div class="step">
         <div class="s-num">Passo 3 · As duas linhas de modelos</div>
         <div class="s-title">Convencional × Alternativa</div>
-        <div class="s-text">A <strong>convencional (CONV)</strong> usa chuva acumulada e níveis de estações vizinhas
-          da bacia das Antas (Antônio Prado, Nova Roma do Sul, Veranópolis, Caxias do Sul, Muitos Capões e
-          Cotiporã), com o histórico dividido em subséries associadas a eventos. A <strong>alternativa (ALT)</strong> usa a
-          <strong>série contínua de hidrotelemetria de alta frequência</strong> das estações a montante. A comparação mede
-          o ganho dos dados telemétricos — e as duas linhas <strong>nunca se misturam</strong> nos quadros do site.</div>
+        <div class="s-text">No modelo <strong>convencional (CONV)</strong>, a rede prevê <strong>diretamente o nível
+          futuro</strong> do rio em Santa Tereza — no modelo de 8h, a saída da RNA já é o nível estimado para t+8h.
+          No <strong>alternativo (ALT)</strong>, a rede prevê a <strong>variação do nível</strong> entre o instante atual e o
+          horizonte; o nível previsto = <strong>nível atual + variação prevista</strong>. O ALT tenta capturar a dinâmica
+          da onda de cheia (subida, descida, aceleração e a resposta das estações a montante); o CONV é mais
+          direto de interpretar, mas pode ficar preso ao valor absoluto do nível. As duas linhas nunca se
+          misturam nos quadros do site.</div>
       </div>
       <div class="step">
         <div class="s-num">Passo 4 · A avaliação</div>
@@ -563,7 +565,8 @@
       <dt>PERS geral / validação / teste</dt><dd>A mesma métrica calculada em todas as linhas auditáveis, só nas linhas de validação e só nas de teste.</dd>
       <dt>Score de equilíbrio</dt><dd>O menor valor entre PERS geral, validação e teste — modelo bom de verdade precisa ir bem nos três.</dd>
       <dt>MAE / E95</dt><dd>Erro absoluto médio e percentil 95 do erro absoluto, em centímetros de nível.</dd>
-      <dt>ALT / CONV</dt><dd>Alternativa: série contínua de hidrotelemetria de alta frequência das estações a montante. Convencional: chuva acumulada e níveis de estações vizinhas, com o histórico dividido em subséries por evento.</dd>
+      <dt>CONV</dt><dd>Previsão direta do nível futuro — a saída da rede já é a cota estimada no horizonte.</dd>
+      <dt>ALT</dt><dd>Previsão da variação do nível; o nível futuro é obtido por nível atual + variação prevista pela rede.</dd>
       <dt>D-n / A-n</dt><dd>Variantes defasadas/derivadas do nível da estação (ex.: D-1h, A-12h), conforme a montagem de inputs de cada rodada.</dd>
     </dl>
     <p class="src" id="src"></p>
@@ -577,7 +580,7 @@
     </div>
     <div>
       <h4>Equipe</h4>
-      <strong>Juliana Carolino Reis</strong> · Guilherme Garcia de Oliveira · Fernanda Vier · Josiane Leci Vanin Barbieri
+      <strong>Juliana Carolino Reis</strong> · Guilherme Garcia de Oliveira · Fernanda Vier
     </div>
     <div>
       <h4>Financiamento</h4>
