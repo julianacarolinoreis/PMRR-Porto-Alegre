@@ -509,7 +509,7 @@
       <div class="stations" id="stations"></div>
     </div>
     <p class="map-note">Posições aproximadas (sede municipal ou trecho do rio) — serão refinadas com as coordenadas
-      oficiais da rede de hidrotelemetria. Dados de nível: estações fluviométricas da rede ANA/SGB.</p>
+      oficiais da rede de hidrotelemetria. Dados de nível: estações fluviométricas da rede ANA/SGB — séries históricas no Hidroweb (snirh.gov.br/hidroweb).</p>
   </section>
 
   <section class="sec">
@@ -1069,7 +1069,15 @@
       const n=document.createElement('div'); n.className='st-name'; n.textContent=st.name;
       const meta=document.createElement('div'); meta.className='st-meta';
       meta.textContent=(st.code!=='—'?'código '+st.code+' · ':'')+st.papel+(st.extra?' · '+st.extra:'');
-      body.append(n,meta); c.append(d,body); list.appendChild(c);
+      body.append(n,meta);
+      if(st.code!=='—'){
+        const lk=document.createElement('a'); lk.className='st-meta';
+        lk.href='https://www.snirh.gov.br/hidroweb/serieshistoricas'; lk.target='_blank'; lk.rel='noopener';
+        lk.textContent='consultar no Hidroweb/ANA (buscar pelo código '+st.code+') ↗';
+        lk.style.display='inline-block'; lk.style.marginTop='2px'; lk.style.color='var(--chrome)';
+        body.appendChild(lk);
+      }
+      c.append(d,body); list.appendChild(c);
     });
   })();
   (function initMap(){
