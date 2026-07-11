@@ -1,0 +1,5883 @@
+{
+ "criterio": "Mantém, por evento, a subida desde o início (mesmo abaixo de 5 m) ate o pico, e corta no primeiro ponto abaixo de 5 m (500 cm) apos o pico. Eventos que nunca passam de 5 m ou apenas um espetinho (<10 linhas acima do bloco) saem inteiros.",
+ "grupos": {
+  "8h_ALT": [
+   {
+    "modelo": "altR_003_06_8h_alt_8H_ALT_C0217",
+    "combo_id": "8H_ALT_C0217",
+    "PERS_teste": 0.7861,
+    "novo": false,
+    "workbook": "8H_ALT__altR_003_06_8h_alt_8H_ALT_C0217__b22df9e61b.xlsx",
+    "csv": "8h_ALT__altR_003_06_8h_alt_8H_ALT_C0217.csv",
+    "linhas_antes": 2624,
+    "linhas_depois": 618,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2155,
+      "depois": 503
+     },
+     "Validacao": {
+      "antes": 343,
+      "depois": 62
+     },
+     "Teste": {
+      "antes": 126,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 98,
+      "mantidas": 25,
+      "descartadas": 73,
+      "pico_cm": 560,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 126,
+      "mantidas": 53,
+      "descartadas": 73,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 245,
+      "mantidas": 37,
+      "descartadas": 208,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 404,
+      "mantidas": 167,
+      "descartadas": 237,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 136,
+      "mantidas": 47,
+      "descartadas": 89,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 389,
+      "mantidas": 104,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 304,
+      "mantidas": 67,
+      "descartadas": 237,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 345,
+      "mantidas": 77,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T2_V1_3_NH_075_06_8h_alt_8H_ALT_C0217",
+    "combo_id": "C0217",
+    "PERS_teste": 0.7834,
+    "novo": true,
+    "workbook": "T2_V1_3_NH_075_06_8h_alt_8H_ALT_C0217_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_ALT__T2_V1_3_NH_075_06_8h_alt_8H_ALT_C0217.csv",
+    "linhas_antes": 2624,
+    "linhas_depois": 618,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2155,
+      "depois": 503
+     },
+     "Validacao": {
+      "antes": 343,
+      "depois": 62
+     },
+     "Teste": {
+      "antes": 126,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 98,
+      "mantidas": 25,
+      "descartadas": 73,
+      "pico_cm": 560,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 126,
+      "mantidas": 53,
+      "descartadas": 73,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 245,
+      "mantidas": 37,
+      "descartadas": 208,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 404,
+      "mantidas": 167,
+      "descartadas": 237,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 136,
+      "mantidas": 47,
+      "descartadas": 89,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 389,
+      "mantidas": 104,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 304,
+      "mantidas": 67,
+      "descartadas": 237,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 345,
+      "mantidas": 77,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T2_V1_3_NH_075_04_8h_alt_8H_ALT_C0273",
+    "combo_id": "C0273",
+    "PERS_teste": 0.7627,
+    "novo": true,
+    "workbook": "T2_V1_3_NH_075_04_8h_alt_8H_ALT_C0273_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_ALT__T2_V1_3_NH_075_04_8h_alt_8H_ALT_C0273.csv",
+    "linhas_antes": 2916,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2422,
+      "depois": 531
+     },
+     "Validacao": {
+      "antes": 362,
+      "depois": 68
+     },
+     "Teste": {
+      "antes": 132,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 100,
+      "mantidas": 26,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 404,
+      "mantidas": 118,
+      "descartadas": 286,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T3_V1_2_NH_075_06_8h_alt_8H_ALT_C0217",
+    "combo_id": "C0217",
+    "PERS_teste": 0.7452,
+    "novo": true,
+    "workbook": "T3_V1_2_NH_075_06_8h_alt_8H_ALT_C0217_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_ALT__T3_V1_2_NH_075_06_8h_alt_8H_ALT_C0217.csv",
+    "linhas_antes": 2624,
+    "linhas_depois": 618,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2155,
+      "depois": 503
+     },
+     "Validacao": {
+      "antes": 224,
+      "depois": 78
+     },
+     "Teste": {
+      "antes": 245,
+      "depois": 37
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 98,
+      "mantidas": 25,
+      "descartadas": 73,
+      "pico_cm": 560,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 126,
+      "mantidas": 53,
+      "descartadas": 73,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 245,
+      "mantidas": 37,
+      "descartadas": 208,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 404,
+      "mantidas": 167,
+      "descartadas": 237,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 136,
+      "mantidas": 47,
+      "descartadas": 89,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 389,
+      "mantidas": 104,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 304,
+      "mantidas": 67,
+      "descartadas": 237,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 345,
+      "mantidas": 77,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T2_V1_3_NH_075_07_8h_alt_8H_ALT_C0241",
+    "combo_id": "C0241",
+    "PERS_teste": 0.7271,
+    "novo": true,
+    "workbook": "T2_V1_3_NH_075_07_8h_alt_8H_ALT_C0241_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_ALT__T2_V1_3_NH_075_07_8h_alt_8H_ALT_C0241.csv",
+    "linhas_antes": 2594,
+    "linhas_depois": 602,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2141,
+      "depois": 493
+     },
+     "Validacao": {
+      "antes": 336,
+      "depois": 60
+     },
+     "Teste": {
+      "antes": 117,
+      "depois": 49
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 96,
+      "mantidas": 24,
+      "descartadas": 72,
+      "pico_cm": 560,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 117,
+      "mantidas": 49,
+      "descartadas": 68,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 240,
+      "mantidas": 36,
+      "descartadas": 204,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 400,
+      "mantidas": 164,
+      "descartadas": 236,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 130,
+      "mantidas": 44,
+      "descartadas": 86,
+      "pico_cm": 1229,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 385,
+      "mantidas": 100,
+      "descartadas": 285,
+      "pico_cm": 739,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 304,
+      "mantidas": 67,
+      "descartadas": 237,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 345,
+      "mantidas": 77,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T2_V1_3_NH_ORIG_07_8h_alt_8H_ALT_C0241",
+    "combo_id": "C0241",
+    "PERS_teste": 0.7245,
+    "novo": true,
+    "workbook": "T2_V1_3_NH_ORIG_07_8h_alt_8H_ALT_C0241_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_ALT__T2_V1_3_NH_ORIG_07_8h_alt_8H_ALT_C0241.csv",
+    "linhas_antes": 2594,
+    "linhas_depois": 602,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2141,
+      "depois": 493
+     },
+     "Validacao": {
+      "antes": 336,
+      "depois": 60
+     },
+     "Teste": {
+      "antes": 117,
+      "depois": 49
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 96,
+      "mantidas": 24,
+      "descartadas": 72,
+      "pico_cm": 560,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 117,
+      "mantidas": 49,
+      "descartadas": 68,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 240,
+      "mantidas": 36,
+      "descartadas": 204,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 400,
+      "mantidas": 164,
+      "descartadas": 236,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 130,
+      "mantidas": 44,
+      "descartadas": 86,
+      "pico_cm": 1229,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 385,
+      "mantidas": 100,
+      "descartadas": 285,
+      "pico_cm": 739,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 304,
+      "mantidas": 67,
+      "descartadas": 237,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 345,
+      "mantidas": 77,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "altR_004_06_8h_alt_8H_ALT_C0217",
+    "combo_id": "8H_ALT_C0217",
+    "PERS_teste": 0.7191,
+    "novo": false,
+    "workbook": "8H_ALT__altR_004_06_8h_alt_8H_ALT_C0217__5b8a69dce2.xlsx",
+    "csv": "8h_ALT__altR_004_06_8h_alt_8H_ALT_C0217.csv",
+    "linhas_antes": 2624,
+    "linhas_depois": 618,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2155,
+      "depois": 503
+     },
+     "Validacao": {
+      "antes": 224,
+      "depois": 78
+     },
+     "Teste": {
+      "antes": 245,
+      "depois": 37
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 98,
+      "mantidas": 25,
+      "descartadas": 73,
+      "pico_cm": 560,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 126,
+      "mantidas": 53,
+      "descartadas": 73,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 245,
+      "mantidas": 37,
+      "descartadas": 208,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 404,
+      "mantidas": 167,
+      "descartadas": 237,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 136,
+      "mantidas": 47,
+      "descartadas": 89,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 389,
+      "mantidas": 104,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 304,
+      "mantidas": 67,
+      "descartadas": 237,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 345,
+      "mantidas": 77,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "altR_004_01_8h_alt_8H_ALT_C0169",
+    "combo_id": "8H_ALT_C0169",
+    "PERS_teste": 0.7159,
+    "novo": false,
+    "workbook": "8H_ALT__altR_004_01_8h_alt_8H_ALT_C0169__23c9315c5a.xlsx",
+    "csv": "8h_ALT__altR_004_01_8h_alt_8H_ALT_C0169.csv",
+    "linhas_antes": 2933,
+    "linhas_depois": 669,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2437,
+      "depois": 546
+     },
+     "Validacao": {
+      "antes": 234,
+      "depois": 81
+     },
+     "Teste": {
+      "antes": 262,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 102,
+      "mantidas": 28,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 285,
+      "mantidas": 55,
+      "descartadas": 230,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 404,
+      "mantidas": 118,
+      "descartadas": 286,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "altR_004_11_8h_alt_8H_ALT_C0174",
+    "combo_id": "8H_ALT_C0174",
+    "PERS_teste": 0.7157,
+    "novo": false,
+    "workbook": "8H_ALT__altR_004_11_8h_alt_8H_ALT_C0174__edde83f1b3.xlsx",
+    "csv": "8h_ALT__altR_004_11_8h_alt_8H_ALT_C0174.csv",
+    "linhas_antes": 2904,
+    "linhas_depois": 667,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2431,
+      "depois": 546
+     },
+     "Validacao": {
+      "antes": 220,
+      "depois": 79
+     },
+     "Teste": {
+      "antes": 253,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 93,
+      "mantidas": 26,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 127,
+      "mantidas": 53,
+      "descartadas": 74,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 253,
+      "mantidas": 42,
+      "descartadas": 211,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 55,
+      "descartadas": 226,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "altR_003_15_8h_alt_8H_ALT_C0268",
+    "combo_id": "8H_ALT_C0268",
+    "PERS_teste": 0.7144,
+    "novo": false,
+    "workbook": "8H_ALT__altR_003_15_8h_alt_8H_ALT_C0268__67aa0c66e1.xlsx",
+    "csv": "8h_ALT__altR_003_15_8h_alt_8H_ALT_C0268.csv",
+    "linhas_antes": 2887,
+    "linhas_depois": 650,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2416,
+      "depois": 531
+     },
+     "Validacao": {
+      "antes": 344,
+      "depois": 66
+     },
+     "Teste": {
+      "antes": 127,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 91,
+      "mantidas": 24,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 127,
+      "mantidas": 53,
+      "descartadas": 74,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 253,
+      "mantidas": 42,
+      "descartadas": 211,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 277,
+      "mantidas": 51,
+      "descartadas": 226,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   }
+  ],
+  "8h_CONV": [
+   {
+    "modelo": "T2_V1_3_NH_075_24_8h_conv_8H_CONV_C0289",
+    "combo_id": "C0289",
+    "PERS_teste": 0.7154,
+    "novo": true,
+    "workbook": "T2_V1_3_NH_075_24_8h_conv_8H_CONV_C0289_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_CONV__T2_V1_3_NH_075_24_8h_conv_8H_CONV_C0289.csv",
+    "linhas_antes": 2881,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2402,
+      "depois": 531
+     },
+     "Validacao": {
+      "antes": 347,
+      "depois": 68
+     },
+     "Teste": {
+      "antes": 132,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 85,
+      "mantidas": 26,
+      "descartadas": 59,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 0,
+      "descartadas": 268,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 303,
+      "mantidas": 67,
+      "descartadas": 236,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 336,
+      "mantidas": 78,
+      "descartadas": 258,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T2_V1_3_NH_ORIG_24_8h_conv_8H_CONV_C0289",
+    "combo_id": "C0289",
+    "PERS_teste": 0.6942,
+    "novo": true,
+    "workbook": "T2_V1_3_NH_ORIG_24_8h_conv_8H_CONV_C0289_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_CONV__T2_V1_3_NH_ORIG_24_8h_conv_8H_CONV_C0289.csv",
+    "linhas_antes": 2881,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2402,
+      "depois": 531
+     },
+     "Validacao": {
+      "antes": 347,
+      "depois": 68
+     },
+     "Teste": {
+      "antes": 132,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 85,
+      "mantidas": 26,
+      "descartadas": 59,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 0,
+      "descartadas": 268,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 303,
+      "mantidas": 67,
+      "descartadas": 236,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 336,
+      "mantidas": 78,
+      "descartadas": 258,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "rot8h_002_24_8h_conv_8H_CONV_C0289",
+    "combo_id": "8H_CONV_C0289",
+    "PERS_teste": 0.651,
+    "novo": false,
+    "workbook": "8H_CONV__rot8h_002_24_8h_conv_8H_CONV_C0289__95ff157912.xlsx",
+    "csv": "8h_CONV__rot8h_002_24_8h_conv_8H_CONV_C0289.csv",
+    "linhas_antes": 2887,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2530,
+      "depois": 573
+     },
+     "Validacao": {
+      "antes": 272,
+      "depois": 53
+     },
+     "Teste": {
+      "antes": 85,
+      "depois": 26
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 85,
+      "mantidas": 26,
+      "descartadas": 59,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Treino",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Validacao",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 13,
+      "conjunto": "Treino",
+      "linhas": 6,
+      "mantidas": 0,
+      "descartadas": 6,
+      "pico_cm": 300,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 0,
+      "descartadas": 268,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 303,
+      "mantidas": 67,
+      "descartadas": 236,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 336,
+      "mantidas": 78,
+      "descartadas": 258,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "rot8h_003_24_8h_conv_8H_CONV_C0289",
+    "combo_id": "8H_CONV_C0289",
+    "PERS_teste": 0.6382,
+    "novo": false,
+    "workbook": "8H_CONV__rot8h_003_24_8h_conv_8H_CONV_C0289__acd602e572.xlsx",
+    "csv": "8h_CONV__rot8h_003_24_8h_conv_8H_CONV_C0289.csv",
+    "linhas_antes": 2887,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2267,
+      "depois": 455
+     },
+     "Validacao": {
+      "antes": 535,
+      "depois": 171
+     },
+     "Teste": {
+      "antes": 85,
+      "depois": 26
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 85,
+      "mantidas": 26,
+      "descartadas": 59,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Treino",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Validacao",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 13,
+      "conjunto": "Treino",
+      "linhas": 6,
+      "mantidas": 0,
+      "descartadas": 6,
+      "pico_cm": 300,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 0,
+      "descartadas": 268,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 303,
+      "mantidas": 67,
+      "descartadas": 236,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 336,
+      "mantidas": 78,
+      "descartadas": 258,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T2_V1_3_NH_ORIG_29_8h_conv_8H_CONV_C0195",
+    "combo_id": "C0195",
+    "PERS_teste": 0.6284,
+    "novo": true,
+    "workbook": "T2_V1_3_NH_ORIG_29_8h_conv_8H_CONV_C0195_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_CONV__T2_V1_3_NH_ORIG_29_8h_conv_8H_CONV_C0195.csv",
+    "linhas_antes": 2792,
+    "linhas_depois": 630,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2344,
+      "depois": 520
+     },
+     "Validacao": {
+      "antes": 330,
+      "depois": 61
+     },
+     "Teste": {
+      "antes": 118,
+      "depois": 49
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 90,
+      "mantidas": 23,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 118,
+      "mantidas": 49,
+      "descartadas": 69,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 240,
+      "mantidas": 38,
+      "descartadas": 202,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 509,
+      "mantidas": 181,
+      "descartadas": 328,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 215,
+      "mantidas": 48,
+      "descartadas": 167,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 390,
+      "mantidas": 105,
+      "descartadas": 285,
+      "pico_cm": 747,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "conv8hR_002_29_8h_conv_8H_CONV_C0195",
+    "combo_id": "8H_CONV_C0195",
+    "PERS_teste": 0.6282,
+    "novo": false,
+    "workbook": "8H_CONV__conv8hR_002_29_8h_conv_8H_CONV_C0195__ef7542194f.xlsx",
+    "csv": "8h_CONV__conv8hR_002_29_8h_conv_8H_CONV_C0195.csv",
+    "linhas_antes": 2792,
+    "linhas_depois": 630,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2344,
+      "depois": 520
+     },
+     "Validacao": {
+      "antes": 330,
+      "depois": 61
+     },
+     "Teste": {
+      "antes": 118,
+      "depois": 49
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 90,
+      "mantidas": 23,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 118,
+      "mantidas": 49,
+      "descartadas": 69,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 240,
+      "mantidas": 38,
+      "descartadas": 202,
+      "pico_cm": 1249,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 509,
+      "mantidas": 181,
+      "descartadas": 328,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 215,
+      "mantidas": 48,
+      "descartadas": 167,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 390,
+      "mantidas": 105,
+      "descartadas": 285,
+      "pico_cm": 747,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "rot8h_001_24_8h_conv_8H_CONV_C0289",
+    "combo_id": "8H_CONV_C0289",
+    "PERS_teste": 0.6211,
+    "novo": false,
+    "workbook": "8H_CONV__rot8h_001_24_8h_conv_8H_CONV_C0289__594ae33876.xlsx",
+    "csv": "8h_CONV__rot8h_001_24_8h_conv_8H_CONV_C0289.csv",
+    "linhas_antes": 2887,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2408,
+      "depois": 531
+     },
+     "Validacao": {
+      "antes": 394,
+      "depois": 95
+     },
+     "Teste": {
+      "antes": 85,
+      "depois": 26
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 85,
+      "mantidas": 26,
+      "descartadas": 59,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 13,
+      "conjunto": "Treino",
+      "linhas": 6,
+      "mantidas": 0,
+      "descartadas": 6,
+      "pico_cm": 300,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 0,
+      "descartadas": 268,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 303,
+      "mantidas": 67,
+      "descartadas": 236,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 336,
+      "mantidas": 78,
+      "descartadas": 258,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "T3_V1_2_NH_ORIG_24_8h_conv_8H_CONV_C0289",
+    "combo_id": "C0289",
+    "PERS_teste": 0.5333,
+    "novo": true,
+    "workbook": "T3_V1_2_NH_ORIG_24_8h_conv_8H_CONV_C0289_AUDITAVEL_INPUTS_RNA.xlsx",
+    "csv": "8h_CONV__T3_V1_2_NH_ORIG_24_8h_conv_8H_CONV_C0289.csv",
+    "linhas_antes": 2881,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2402,
+      "depois": 531
+     },
+     "Validacao": {
+      "antes": 217,
+      "depois": 79
+     },
+     "Teste": {
+      "antes": 262,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 85,
+      "mantidas": 26,
+      "descartadas": 59,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 0,
+      "descartadas": 268,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 303,
+      "mantidas": 67,
+      "descartadas": 236,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 336,
+      "mantidas": 78,
+      "descartadas": 258,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "rot8h_003_31_8h_conv_8H_CONV_C0268",
+    "combo_id": "8H_CONV_C0268",
+    "PERS_teste": 0.5114,
+    "novo": false,
+    "workbook": "8H_CONV__rot8h_003_31_8h_conv_8H_CONV_C0268__e6f2119444.xlsx",
+    "csv": "8h_CONV__rot8h_003_31_8h_conv_8H_CONV_C0268.csv",
+    "linhas_antes": 2893,
+    "linhas_depois": 650,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2272,
+      "depois": 455
+     },
+     "Validacao": {
+      "antes": 530,
+      "depois": 171
+     },
+     "Teste": {
+      "antes": 91,
+      "depois": 24
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 91,
+      "mantidas": 24,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 127,
+      "mantidas": 53,
+      "descartadas": 74,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Treino",
+      "linhas": 253,
+      "mantidas": 42,
+      "descartadas": 211,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 277,
+      "mantidas": 51,
+      "descartadas": 226,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Validacao",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 13,
+      "conjunto": "Treino",
+      "linhas": 6,
+      "mantidas": 0,
+      "descartadas": 6,
+      "pico_cm": 300,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "conv8hR_003_24_8h_conv_8H_CONV_C0289",
+    "combo_id": "8H_CONV_C0289",
+    "PERS_teste": 0.4942,
+    "novo": false,
+    "workbook": "8H_CONV__conv8hR_003_24_8h_conv_8H_CONV_C0289__c3777e4803.xlsx",
+    "csv": "8h_CONV__conv8hR_003_24_8h_conv_8H_CONV_C0289.csv",
+    "linhas_antes": 2881,
+    "linhas_depois": 652,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2402,
+      "depois": 531
+     },
+     "Validacao": {
+      "antes": 217,
+      "depois": 79
+     },
+     "Teste": {
+      "antes": 262,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 85,
+      "mantidas": 26,
+      "descartadas": 59,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 132,
+      "mantidas": 53,
+      "descartadas": 79,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 262,
+      "mantidas": 42,
+      "descartadas": 220,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 281,
+      "mantidas": 51,
+      "descartadas": 230,
+      "pico_cm": 1566,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 92,
+      "mantidas": 0,
+      "descartadas": 92,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 0,
+      "descartadas": 268,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 303,
+      "mantidas": 67,
+      "descartadas": 236,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 336,
+      "mantidas": 78,
+      "descartadas": 258,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   }
+  ],
+  "12h_ALT": [
+   {
+    "modelo": "001_alt_C0065_R01_T2_V1_3",
+    "combo_id": "C0065",
+    "PERS_teste": 0.8397,
+    "novo": false,
+    "workbook": "12H_ALT__001_alt_C0065_R01_T2_V1_3__63fe90f903.xlsx",
+    "csv": "12h_ALT__001_alt_C0065_R01_T2_V1_3.csv",
+    "linhas_antes": 2898,
+    "linhas_depois": 647,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2411,
+      "depois": 529
+     },
+     "Validacao": {
+      "antes": 358,
+      "depois": 65
+     },
+     "Teste": {
+      "antes": 129,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "005_alt_C0232_R01_T2_V1_3",
+    "combo_id": "C0232",
+    "PERS_teste": 0.8115,
+    "novo": false,
+    "workbook": "12H_ALT__005_alt_C0232_R01_T2_V1_3__e361b89890.xlsx",
+    "csv": "12h_ALT__005_alt_C0232_R01_T2_V1_3.csv",
+    "linhas_antes": 2890,
+    "linhas_depois": 645,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2403,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 358,
+      "depois": 65
+     },
+     "Teste": {
+      "antes": 129,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "007_alt_C0237_R01_T2_V1_3",
+    "combo_id": "C0237",
+    "PERS_teste": 0.801,
+    "novo": false,
+    "workbook": "12H_ALT__007_alt_C0237_R01_T2_V1_3__7762d729e0.xlsx",
+    "csv": "12h_ALT__007_alt_C0237_R01_T2_V1_3.csv",
+    "linhas_antes": 2862,
+    "linhas_depois": 644,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2397,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 341,
+      "depois": 64
+     },
+     "Teste": {
+      "antes": 124,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 89,
+      "mantidas": 22,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 124,
+      "mantidas": 53,
+      "descartadas": 71,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 252,
+      "mantidas": 42,
+      "descartadas": 210,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 49,
+      "descartadas": 219,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 398,
+      "mantidas": 116,
+      "descartadas": 282,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 86,
+      "mantidas": 0,
+      "descartadas": 86,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "003_alt_C0149_R01_T2_V1_3",
+    "combo_id": "C0149",
+    "PERS_teste": 0.7644,
+    "novo": false,
+    "workbook": "12H_ALT__003_alt_C0149_R01_T2_V1_3__8b8ef004c0.xlsx",
+    "csv": "12h_ALT__003_alt_C0149_R01_T2_V1_3.csv",
+    "linhas_antes": 2912,
+    "linhas_depois": 666,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2420,
+      "depois": 544
+     },
+     "Validacao": {
+      "antes": 362,
+      "depois": 69
+     },
+     "Teste": {
+      "antes": 130,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 101,
+      "mantidas": 27,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 130,
+      "mantidas": 53,
+      "descartadas": 77,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 278,
+      "mantidas": 55,
+      "descartadas": 223,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "011_alt_C0065_R02_T3_V1_2",
+    "combo_id": "C0065",
+    "PERS_teste": 0.6629,
+    "novo": false,
+    "workbook": "12H_ALT__011_alt_C0065_R02_T3_V1_2__6d1863e441.xlsx",
+    "csv": "12h_ALT__011_alt_C0065_R02_T3_V1_2.csv",
+    "linhas_antes": 2898,
+    "linhas_depois": 647,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2411,
+      "depois": 529
+     },
+     "Validacao": {
+      "antes": 226,
+      "depois": 76
+     },
+     "Teste": {
+      "antes": 261,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "027_alt_C0237_R03_T1_V2_3",
+    "combo_id": "C0237",
+    "PERS_teste": 0.6577,
+    "novo": false,
+    "workbook": "12H_ALT__027_alt_C0237_R03_T1_V2_3__fae644f1d8.xlsx",
+    "csv": "12h_ALT__027_alt_C0237_R03_T1_V2_3.csv",
+    "linhas_antes": 2862,
+    "linhas_depois": 644,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2397,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 376,
+      "depois": 95
+     },
+     "Teste": {
+      "antes": 89,
+      "depois": 22
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 89,
+      "mantidas": 22,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 124,
+      "mantidas": 53,
+      "descartadas": 71,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 252,
+      "mantidas": 42,
+      "descartadas": 210,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 49,
+      "descartadas": 219,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 398,
+      "mantidas": 116,
+      "descartadas": 282,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 86,
+      "mantidas": 0,
+      "descartadas": 86,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "037_alt_C0237_R04_T1_V2_12",
+    "combo_id": "C0237",
+    "PERS_teste": 0.6573,
+    "novo": false,
+    "workbook": "12H_ALT__037_alt_C0237_R04_T1_V2_12__551dccac70.xlsx",
+    "csv": "12h_ALT__037_alt_C0237_R04_T1_V2_12.csv",
+    "linhas_antes": 2862,
+    "linhas_depois": 644,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2251,
+      "depois": 453
+     },
+     "Validacao": {
+      "antes": 522,
+      "depois": 169
+     },
+     "Teste": {
+      "antes": 89,
+      "depois": 22
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 89,
+      "mantidas": 22,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 124,
+      "mantidas": 53,
+      "descartadas": 71,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Treino",
+      "linhas": 252,
+      "mantidas": 42,
+      "descartadas": 210,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 49,
+      "descartadas": 219,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Validacao",
+      "linhas": 398,
+      "mantidas": 116,
+      "descartadas": 282,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 86,
+      "mantidas": 0,
+      "descartadas": 86,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "013_alt_C0149_R02_T3_V1_2",
+    "combo_id": "C0149",
+    "PERS_teste": 0.6564,
+    "novo": false,
+    "workbook": "12H_ALT__013_alt_C0149_R02_T3_V1_2__8ad4886c5b.xlsx",
+    "csv": "12h_ALT__013_alt_C0149_R02_T3_V1_2.csv",
+    "linhas_antes": 2912,
+    "linhas_depois": 666,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2420,
+      "depois": 544
+     },
+     "Validacao": {
+      "antes": 231,
+      "depois": 80
+     },
+     "Teste": {
+      "antes": 261,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 101,
+      "mantidas": 27,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 130,
+      "mantidas": 53,
+      "descartadas": 77,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 278,
+      "mantidas": 55,
+      "descartadas": 223,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "029_alt_C0918_R03_T1_V2_3",
+    "combo_id": "C0918",
+    "PERS_teste": 0.6493,
+    "novo": false,
+    "workbook": "12H_ALT__029_alt_C0918_R03_T1_V2_3__555849e520.xlsx",
+    "csv": "12h_ALT__029_alt_C0918_R03_T1_V2_3.csv",
+    "linhas_antes": 1829,
+    "linhas_depois": 350,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 1345,
+      "depois": 233
+     },
+     "Validacao": {
+      "antes": 388,
+      "depois": 95
+     },
+     "Teste": {
+      "antes": 96,
+      "depois": 22
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 96,
+      "mantidas": 22,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 127,
+      "mantidas": 53,
+      "descartadas": 74,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 21,
+      "mantidas": 21,
+      "descartadas": 0,
+      "pico_cm": 636,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 262,
+      "mantidas": 49,
+      "descartadas": 213,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 82,
+      "mantidas": 0,
+      "descartadas": 82,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 241,
+      "mantidas": 0,
+      "descartadas": 241,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 229,
+      "mantidas": 66,
+      "descartadas": 163,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "017_alt_C0237_R02_T3_V1_2",
+    "combo_id": "C0237",
+    "PERS_teste": 0.6066,
+    "novo": false,
+    "workbook": "12H_ALT__017_alt_C0237_R02_T3_V1_2__0c2f629d73.xlsx",
+    "csv": "12h_ALT__017_alt_C0237_R02_T3_V1_2.csv",
+    "linhas_antes": 2862,
+    "linhas_depois": 644,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2397,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 213,
+      "depois": 75
+     },
+     "Teste": {
+      "antes": 252,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 89,
+      "mantidas": 22,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 124,
+      "mantidas": 53,
+      "descartadas": 71,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 252,
+      "mantidas": 42,
+      "descartadas": 210,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 49,
+      "descartadas": 219,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 398,
+      "mantidas": 116,
+      "descartadas": 282,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 86,
+      "mantidas": 0,
+      "descartadas": 86,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   }
+  ],
+  "12h_CONV": [
+   {
+    "modelo": "004_conv_C0149_R01_T2_V1_3",
+    "combo_id": "C0149",
+    "PERS_teste": 0.6959,
+    "novo": false,
+    "workbook": "12H_CONV__004_conv_C0149_R01_T2_V1_3__5391342143.xlsx",
+    "csv": "12h_CONV__004_conv_C0149_R01_T2_V1_3.csv",
+    "linhas_antes": 2912,
+    "linhas_depois": 666,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2420,
+      "depois": 544
+     },
+     "Validacao": {
+      "antes": 362,
+      "depois": 69
+     },
+     "Teste": {
+      "antes": 130,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 101,
+      "mantidas": 27,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 130,
+      "mantidas": 53,
+      "descartadas": 77,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 278,
+      "mantidas": 55,
+      "descartadas": 223,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "002_conv_C0065_R01_T2_V1_3",
+    "combo_id": "C0065",
+    "PERS_teste": 0.6662,
+    "novo": false,
+    "workbook": "12H_CONV__002_conv_C0065_R01_T2_V1_3__5ec0b32348.xlsx",
+    "csv": "12h_CONV__002_conv_C0065_R01_T2_V1_3.csv",
+    "linhas_antes": 2898,
+    "linhas_depois": 647,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2411,
+      "depois": 529
+     },
+     "Validacao": {
+      "antes": 358,
+      "depois": 65
+     },
+     "Teste": {
+      "antes": 129,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "036_conv_C0232_R04_T1_V2_12",
+    "combo_id": "C0232",
+    "PERS_teste": 0.6246,
+    "novo": false,
+    "workbook": "12H_CONV__036_conv_C0232_R04_T1_V2_12__c4c58a610e.xlsx",
+    "csv": "12h_CONV__036_conv_C0232_R04_T1_V2_12.csv",
+    "linhas_antes": 2890,
+    "linhas_depois": 645,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2265,
+      "depois": 453
+     },
+     "Validacao": {
+      "antes": 528,
+      "depois": 169
+     },
+     "Teste": {
+      "antes": 97,
+      "depois": 23
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Treino",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Validacao",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "006_conv_C0232_R01_T2_V1_3",
+    "combo_id": "C0232",
+    "PERS_teste": 0.5888,
+    "novo": false,
+    "workbook": "12H_CONV__006_conv_C0232_R01_T2_V1_3__3fe547669c.xlsx",
+    "csv": "12h_CONV__006_conv_C0232_R01_T2_V1_3.csv",
+    "linhas_antes": 2890,
+    "linhas_depois": 645,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2403,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 358,
+      "depois": 65
+     },
+     "Teste": {
+      "antes": 129,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "014_conv_C0149_R02_T3_V1_2",
+    "combo_id": "C0149",
+    "PERS_teste": 0.5711,
+    "novo": false,
+    "workbook": "12H_CONV__014_conv_C0149_R02_T3_V1_2__e1f2036f91.xlsx",
+    "csv": "12h_CONV__014_conv_C0149_R02_T3_V1_2.csv",
+    "linhas_antes": 2912,
+    "linhas_depois": 666,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2420,
+      "depois": 544
+     },
+     "Validacao": {
+      "antes": 231,
+      "depois": 80
+     },
+     "Teste": {
+      "antes": 261,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 101,
+      "mantidas": 27,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 130,
+      "mantidas": 53,
+      "descartadas": 77,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 278,
+      "mantidas": 55,
+      "descartadas": 223,
+      "pico_cm": 1616,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 73,
+      "mantidas": 41,
+      "descartadas": 32,
+      "pico_cm": 2226,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "038_conv_C0237_R04_T1_V2_12",
+    "combo_id": "C0237",
+    "PERS_teste": 0.5345,
+    "novo": false,
+    "workbook": "12H_CONV__038_conv_C0237_R04_T1_V2_12__73233ee8fd.xlsx",
+    "csv": "12h_CONV__038_conv_C0237_R04_T1_V2_12.csv",
+    "linhas_antes": 2862,
+    "linhas_depois": 644,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2251,
+      "depois": 453
+     },
+     "Validacao": {
+      "antes": 522,
+      "depois": 169
+     },
+     "Teste": {
+      "antes": 89,
+      "depois": 22
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Teste",
+      "linhas": 89,
+      "mantidas": 22,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 124,
+      "mantidas": 53,
+      "descartadas": 71,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Treino",
+      "linhas": 252,
+      "mantidas": 42,
+      "descartadas": 210,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 49,
+      "descartadas": 219,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Validacao",
+      "linhas": 398,
+      "mantidas": 116,
+      "descartadas": 282,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 86,
+      "mantidas": 0,
+      "descartadas": 86,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "016_conv_C0232_R02_T3_V1_2",
+    "combo_id": "C0232",
+    "PERS_teste": 0.5245,
+    "novo": false,
+    "workbook": "12H_CONV__016_conv_C0232_R02_T3_V1_2__1f044a5225.xlsx",
+    "csv": "12h_CONV__016_conv_C0232_R02_T3_V1_2.csv",
+    "linhas_antes": 2890,
+    "linhas_depois": 645,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2403,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 226,
+      "depois": 76
+     },
+     "Teste": {
+      "antes": 261,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 399,
+      "mantidas": 116,
+      "descartadas": 283,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 87,
+      "mantidas": 0,
+      "descartadas": 87,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "012_conv_C0065_R02_T3_V1_2",
+    "combo_id": "C0065",
+    "PERS_teste": 0.5185,
+    "novo": false,
+    "workbook": "12H_CONV__012_conv_C0065_R02_T3_V1_2__9b8435b71d.xlsx",
+    "csv": "12h_CONV__012_conv_C0065_R02_T3_V1_2.csv",
+    "linhas_antes": 2898,
+    "linhas_depois": 647,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2411,
+      "depois": 529
+     },
+     "Validacao": {
+      "antes": 226,
+      "depois": 76
+     },
+     "Teste": {
+      "antes": 261,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 97,
+      "mantidas": 23,
+      "descartadas": 74,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 129,
+      "mantidas": 53,
+      "descartadas": 76,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 261,
+      "mantidas": 42,
+      "descartadas": 219,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 49,
+      "descartadas": 223,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 403,
+      "mantidas": 118,
+      "descartadas": 285,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 91,
+      "mantidas": 0,
+      "descartadas": 91,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "018_conv_C0237_R02_T3_V1_2",
+    "combo_id": "C0237",
+    "PERS_teste": 0.4333,
+    "novo": false,
+    "workbook": "12H_CONV__018_conv_C0237_R02_T3_V1_2__44c460dfd3.xlsx",
+    "csv": "12h_CONV__018_conv_C0237_R02_T3_V1_2.csv",
+    "linhas_antes": 2862,
+    "linhas_depois": 644,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2397,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 213,
+      "depois": 75
+     },
+     "Teste": {
+      "antes": 252,
+      "depois": 42
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 89,
+      "mantidas": 22,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Validacao",
+      "linhas": 124,
+      "mantidas": 53,
+      "descartadas": 71,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Teste",
+      "linhas": 252,
+      "mantidas": 42,
+      "descartadas": 210,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 49,
+      "descartadas": 219,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 398,
+      "mantidas": 116,
+      "descartadas": 282,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 86,
+      "mantidas": 0,
+      "descartadas": 86,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   },
+   {
+    "modelo": "008_conv_C0237_R01_T2_V1_3",
+    "combo_id": "C0237",
+    "PERS_teste": 0.4258,
+    "novo": false,
+    "workbook": "12H_CONV__008_conv_C0237_R01_T2_V1_3__4798bc7aa8.xlsx",
+    "csv": "12h_CONV__008_conv_C0237_R01_T2_V1_3.csv",
+    "linhas_antes": 2862,
+    "linhas_depois": 644,
+    "por_conjunto": {
+     "Treino": {
+      "antes": 2397,
+      "depois": 527
+     },
+     "Validacao": {
+      "antes": 341,
+      "depois": 64
+     },
+     "Teste": {
+      "antes": 124,
+      "depois": 53
+     }
+    },
+    "eventos": [
+     {
+      "evento": 1,
+      "conjunto": "Validacao",
+      "linhas": 89,
+      "mantidas": 22,
+      "descartadas": 67,
+      "pico_cm": 562,
+      "inicio_cm": 398,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 2,
+      "conjunto": "Teste",
+      "linhas": 124,
+      "mantidas": 53,
+      "descartadas": 71,
+      "pico_cm": 893,
+      "inicio_cm": 336,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 3,
+      "conjunto": "Validacao",
+      "linhas": 252,
+      "mantidas": 42,
+      "descartadas": 210,
+      "pico_cm": 1250,
+      "inicio_cm": 433,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 4,
+      "conjunto": "Treino",
+      "linhas": 517,
+      "mantidas": 187,
+      "descartadas": 330,
+      "pico_cm": 2365,
+      "inicio_cm": 306,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 5,
+      "conjunto": "Treino",
+      "linhas": 268,
+      "mantidas": 49,
+      "descartadas": 219,
+      "pico_cm": 1433,
+      "inicio_cm": 593,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 7,
+      "conjunto": "Treino",
+      "linhas": 140,
+      "mantidas": 0,
+      "descartadas": 140,
+      "pico_cm": 544,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 8,
+      "conjunto": "Treino",
+      "linhas": 62,
+      "mantidas": 30,
+      "descartadas": 32,
+      "pico_cm": 1030,
+      "inicio_cm": 374,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 12,
+      "conjunto": "Treino",
+      "linhas": 398,
+      "mantidas": 116,
+      "descartadas": 282,
+      "pico_cm": 749,
+      "inicio_cm": 320,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 14,
+      "conjunto": "Treino",
+      "linhas": 86,
+      "mantidas": 0,
+      "descartadas": 86,
+      "pico_cm": 437,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 18,
+      "conjunto": "Treino",
+      "linhas": 272,
+      "mantidas": 0,
+      "descartadas": 272,
+      "pico_cm": 473,
+      "inicio_cm": null,
+      "descartado_inteiro": true
+     },
+     {
+      "evento": 19,
+      "conjunto": "Treino",
+      "linhas": 308,
+      "mantidas": 67,
+      "descartadas": 241,
+      "pico_cm": 630,
+      "inicio_cm": 269,
+      "descartado_inteiro": false
+     },
+     {
+      "evento": 20,
+      "conjunto": "Treino",
+      "linhas": 346,
+      "mantidas": 78,
+      "descartadas": 268,
+      "pico_cm": 801,
+      "inicio_cm": 303,
+      "descartado_inteiro": false
+     }
+    ]
+   }
+  ]
+ }
+}
