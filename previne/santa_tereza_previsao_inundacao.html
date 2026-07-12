@@ -39,6 +39,7 @@
   .hydro{margin-top:4px}
   .disc{font-size:11px;color:var(--muted);background:#f7faf8;border:1px solid var(--line);border-radius:10px;padding:9px;line-height:1.45;margin-top:8px}
   .banner{position:absolute;z-index:500;left:10px;top:10px;background:#fff4e5;color:#8a5a12;border:1px solid #f0d9b5;border-radius:8px;padding:7px 11px;font-size:12px;max-width:70%}
+  .flood-ov{image-rendering:pixelated;image-rendering:crisp-edges}
   @media(max-width:900px){main{grid-template-columns:1fr;height:auto}#map{height:58vh}aside{border-left:0;border-top:1px solid var(--line)}}
 </style>
 </head>
@@ -79,7 +80,7 @@
       <div class="row"><span class="sw water"></span>água (nível atual) — mais escuro, mais fundo</div>
       <div class="row"><span class="sw fore"></span>contorno da previsão da RNA (+N h)</div>
     </div>
-    <div class="disc">Prova de conceito. HAND derivado do DEM Copernicus GLO-30 (30 m) — mostra a várzea e os bairros baixos, não resolve casa a casa. A cota de margem é uma calibração; a precisão final depende de amarrar a régua ao terreno (marca d'água/mancha observada) e de um MDT mais fino.</div>
+    <div class="disc"><b>Prova de conceito — não validado em nível de rua.</b> HAND derivado do DEM Copernicus GLO-30 (30 m): a mecânica (o nível previsto virando mancha ao longo do vale) é real, mas a <b>posição exata da água nas ruas não é confiável</b> — o DEM de 30 m não resolve o terraço da cidade e a calibração régua↔terreno ainda é aproximada. A <b>cota de inundação oficial é 15 m</b> (SGB/SACE); repare no hidrograma que os eventos de teste <b>ficam abaixo dos 15 m</b> — subiram no canal/várzea, sem atingir o primeiro ponto de interesse. Para validar: uma <b>mancha observada</b> de um evento de cota conhecida e um MDT mais fino.</div>
   </aside>
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -89,6 +90,7 @@
 const HAND=JSON.parse(document.getElementById('hand-data').textContent);
 const EVENTS=JSON.parse(document.getElementById('event-data').textContent);
 const COLS=HAND.cols, ROWS=HAND.rows;
+const COTA_INUND=1500; // cota de inundacao oficial SGB/SACE (cm) — primeiro ponto de interesse atingido
 const BOUNDS=[[HAND.S,HAND.W],[HAND.N,HAND.E]];
 const nf=new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0});
 const nf1=new Intl.NumberFormat('pt-BR',{maximumFractionDigits:1});
@@ -161,16 +163,16 @@ function drawHydro(){
   const ev=EVENTS[curEv], S=ev.series;
   const W=320,H=90,pad=6;
   const vals=S.map(s=>s[1]).filter(v=>v!=null);
-  const lo=Math.min(...vals), hi=Math.max(...vals);
+  const lo=Math.min(...vals), hi=Math.max(Math.max(...vals), COTA_INUND+40);
   const X=i=>pad+(W-2*pad)*i/(S.length-1);
   const Y=v=>H-pad-(H-2*pad)*(v-lo)/((hi-lo)||1);
   let path='M'+S.map((s,i)=>X(i).toFixed(1)+','+Y(s[1]).toFixed(1)).join('L');
-  const yb=Y(bankfull);
+  const yi=Y(COTA_INUND);
   const cx=X(tIdx);
   const svg=document.getElementById('hydro');
   svg.innerHTML=`
-    <line x1="${pad}" y1="${yb.toFixed(1)}" x2="${W-pad}" y2="${yb.toFixed(1)}" stroke="#c98a1a" stroke-width="1" stroke-dasharray="3 3"/>
-    <text x="${W-pad}" y="${(yb-3).toFixed(1)}" text-anchor="end" font-size="8" fill="#a8801a">margem</text>
+    <line x1="${pad}" y1="${yi.toFixed(1)}" x2="${W-pad}" y2="${yi.toFixed(1)}" stroke="#c0392b" stroke-width="1.2" stroke-dasharray="4 2"/>
+    <text x="${W-pad}" y="${(yi-3).toFixed(1)}" text-anchor="end" font-size="8" fill="#c0392b">cota de inundação · 15 m</text>
     <path d="${path}" fill="none" stroke="#1f6fbf" stroke-width="1.6"/>
     <line x1="${cx.toFixed(1)}" y1="${pad}" x2="${cx.toFixed(1)}" y2="${H-pad}" stroke="#0f6b4a" stroke-width="1.5"/>
     <circle cx="${cx.toFixed(1)}" cy="${Y(S[tIdx][1]).toFixed(1)}" r="3" fill="#0f6b4a"/>`;
@@ -215,7 +217,10 @@ async function init(){
     sat.on('tileerror',()=>{ if(!map.hasLayer(osm)&&!map.hasLayer(sat)) osm.addTo(map); });
     sat.addTo(map); labels.addTo(map);
     L.control.layers({'Satélite':sat,'Ruas':osm},{'Rótulos de ruas':labels},{position:'topright'}).addTo(map);
-    waterOverlay=L.imageOverlay(outCanvas.toDataURL(), BOUNDS, {opacity:.6}).addTo(map);
+    waterOverlay=L.imageOverlay(outCanvas.toDataURL(), BOUNDS, {opacity:.6, className:'flood-ov'}).addTo(map);
+    const cav=document.createElement('div'); cav.className='banner';
+    cav.innerHTML='Prova de conceito &middot; extensão <b>não validada em nível de rua</b> (DEM 30 m, calibração aproximada). A posição da mancha é indicativa.';
+    document.getElementById('map').appendChild(cav);
     const st=HAND.station, pt=HAND.ponte;
     L.circleMarker([st.lat,st.lon],{radius:7,color:'#fff',weight:2,fillColor:'#1f6fbf',fillOpacity:.95}).addTo(map).bindPopup('<b>Estação '+st.code+'</b><br>Santa Tereza');
     if(pt) L.circleMarker([pt.lat,pt.lon],{radius:6,color:'#fff',weight:2,fillColor:'#b04538',fillOpacity:.95}).addTo(map).bindPopup('<b>'+pt.label+'</b>');
