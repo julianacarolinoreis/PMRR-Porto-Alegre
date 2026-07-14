@@ -82,6 +82,14 @@
   .disc{font-size:11px;color:var(--muted);background:#f7faf8;border:1px solid var(--line);border-radius:10px;padding:9px;line-height:1.45;margin-top:10px}
   .banner{position:absolute;z-index:500;left:10px;top:10px;background:#fff4e5;color:#8a5a12;border:1px solid #f0d9b5;border-radius:8px;padding:7px 11px;font-size:12px;max-width:66%}
   .flood-ov{image-rendering:auto}
+  .live-btn{width:100%;margin-bottom:12px;padding:12px;border:none;border-radius:12px;background:linear-gradient(135deg,#c0392b,#e8730c);color:#fff;font-size:13.5px;font-weight:750;cursor:pointer;box-shadow:var(--shadow)}
+  .live-bar{display:flex;align-items:center;gap:8px;background:#fdecea;border:1px solid #f3c0b8;border-radius:12px;padding:10px 12px;margin-bottom:12px;font-size:13px;font-weight:700;color:#a5281c}
+  .live-bar .ldot{width:10px;height:10px;border-radius:50%;background:#c0392b;animation:pulse 1.2s infinite;flex:0 0 auto}
+  .live-bar a{margin-left:auto;color:#a5281c;cursor:pointer;text-decoration:underline;font-weight:600}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  .live-note{font-size:11px;color:#a5281c;background:#fff6f5;border:1px solid #f3d3cd;border-radius:9px;padding:7px 10px;margin-bottom:10px;line-height:1.4}
+  body.live #scn, body.live .tl{display:none}
+  body.live .simple-only{display:block}
   .hydro{margin-top:4px}
   .leaflet-popup-content{font-size:13px;margin:9px 12px}
   .pt-pop b{color:var(--agora)} .pt-pop .pf{color:var(--prev)}
@@ -104,7 +112,19 @@
 <main>
   <div id="map"></div>
   <aside>
+    <button class="live-btn" id="live-btn">🔴 Ver modo AO VIVO (ensaio com a cheia de 2024)</button>
+    <div class="live-bar" id="live-bar" style="display:none"><span class="ldot"></span> AO VIVO · atualizado: <span id="live-when">—</span> <a id="live-exit">sair do ao vivo</a></div>
+    <div class="live-note" id="live-note" style="display:none"></div>
+
     <div class="scn" id="scn"></div>
+
+    <!-- ===== LINHA DO TEMPO (compartilhada) ===== -->
+    <div class="tl">
+      <div class="q" style="margin-top:2px">Quando isso pode acontecer?</div>
+      <div class="head"><button class="play" id="play">▶</button>
+        <div style="flex:1"><div class="tlab" id="tlab">—</div><input type="range" id="time" min="0" max="1" value="0"></div></div>
+      <div class="hint">Arraste a linha do tempo (ou dê play) para ver a água avançar. Clique em um ponto do mapa para a profundidade ali.</div>
+    </div>
 
     <!-- ===== MODO SIMPLES ===== -->
     <div class="simple-only">
@@ -204,6 +224,8 @@ const CONF={'2h':['Alta','#1b7a5a'],'4h':['Moderada','#c98a1a'],'8h':['Moderada'
 let handArr=null, curEv=Object.keys(EVENTS)[0];
 let bankfull=300, tIdx=0, playing=false, timer=null, map=null, waterOverlay=null, curS=null;
 const calibByEvent={};
+const LIVE_URL='previsao_ao_vivo.json';
+let liveMode=false, liveTimer=null, liveIdx=0, liveData=null;
 const outCanvas=document.createElement('canvas'); outCanvas.width=FCOLS; outCanvas.height=FROWS;
 const octx=outCanvas.getContext('2d');
 
@@ -330,6 +352,37 @@ function setEvent(ev){
 }
 function tick(){const E=EVENTS[curEv]; tIdx=(tIdx+1)%E.series.length; document.getElementById('time').value=tIdx; renderFrame(); if(playing) timer=setTimeout(tick,300);}
 
+// ===== MODO AO VIVO =====
+function renderLiveStep(){
+  const P=liveData.passos[liveIdx]; // [datahora, nivel_atual_cm, nivel_previsto_cm]
+  EVENTS['__live__']={label:'AO VIVO',horizonte:liveData.horizonte||'2h',combo:liveData.modelo||'—',pers:null,ilustra:false,estatico:false,n:1,pico_obs_cm:P[1],series:[[P[0],P[1],null,P[2]]]};
+  bankfull=liveData.bankfull_cm||300;
+  curEv='__live__'; tIdx=0;
+  const hz=liveData.horizonte||'2h';
+  set('hz',hz); set('hz2',hz); set('s-hz','+'+hz); set('s-hz2',hz.replace('h',''));
+  set('live-when', P[0]);
+  renderFrame();
+}
+async function enterLive(){
+  let d; try{ const r=await fetch(LIVE_URL,{cache:'no-store'}); if(!r.ok) throw new Error('HTTP '+r.status); d=await r.json(); }
+  catch(e){ document.getElementById('live-note').style.display=''; document.getElementById('live-note').textContent='Não consegui carregar a previsão ao vivo ('+e.message+'). No site publicado, o robô agendado preenche esse arquivo.'; return; }
+  liveData=d; liveMode=true; document.body.classList.add('live'); liveIdx=0;
+  document.getElementById('live-bar').style.display='';
+  const note=document.getElementById('live-note'); note.style.display=''; note.textContent=d.aviso||'EXPERIMENTAL — não é alerta oficial.';
+  if(playing){playing=false; clearTimeout(timer); document.getElementById('play').textContent='▶';}
+  if(d.modo==='replay' && Array.isArray(d.passos)){
+    renderLiveStep(); clearInterval(liveTimer);
+    liveTimer=setInterval(()=>{ liveIdx=(liveIdx+1)%liveData.passos.length; renderLiveStep(); }, d.intervalo_ms||2500);
+  } else { // ao_vivo real: um ponto + repesca a cada 60 s
+    liveData.passos=[[d.gerado_em, d.nivel_atual_cm, d.nivel_previsto_cm]]; renderLiveStep();
+    clearInterval(liveTimer);
+    liveTimer=setInterval(async()=>{ try{const r=await fetch(LIVE_URL,{cache:'no-store'}); const j=await r.json(); liveData=j; liveData.passos=[[j.gerado_em,j.nivel_atual_cm,j.nivel_previsto_cm]]; liveIdx=0; renderLiveStep();}catch(e){} }, 60000);
+  }
+}
+function exitLive(){ liveMode=false; clearInterval(liveTimer); document.body.classList.remove('live');
+  document.getElementById('live-bar').style.display='none'; document.getElementById('live-note').style.display='none';
+  delete EVENTS['__live__']; setEvent(Object.keys(EVENTS)[0]); }
+
 function buildScenarios(){
   const scn=document.getElementById('scn'); const groups={'Cheias que transbordaram':[],'Testes de previsão':[],'Referência':[]};
   Object.keys(EVENTS).forEach(k=>{const E=EVENTS[k];
@@ -354,6 +407,8 @@ async function init(){
     const r=e.currentTarget.getBoundingClientRect(), sx=(e.clientX-r.left)/r.width*320;
     let i=Math.round((sx-6)/(320-12)*(E.series.length-1)); i=Math.max(0,Math.min(E.series.length-1,i)); tIdx=i; document.getElementById('time').value=i; renderFrame();});
   document.querySelectorAll('.method .step').forEach(s=>s.onclick=()=>set('method-exp',s.dataset.exp));
+  document.getElementById('live-btn').onclick=enterLive;
+  document.getElementById('live-exit').onclick=exitLive;
 
   await loadHand();
   if(typeof L!=='undefined'){
